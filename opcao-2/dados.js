@@ -230,6 +230,7 @@ window.PERFIL = {
    "legenda": "Cartela de cores Palmeiras Pop, ref. 14064wB 🌴\n\n#cartela #estampas #modapraia #estampaexclusiva #vanguardatextil",
    "id": "o2-01",
    "fixado": true,
+   "proporcao": "1080 / 1350",
    "curtidas": 364,
    "comentarios": 26,
    "data": "2 dias"
@@ -257,6 +258,7 @@ window.PERFIL = {
    ],
    "legenda": "Cartela de cores da estampa Hibisco 🎨 As cores que você vê aqui são as que saem no tecido. Ref. 14225w\n\n#cartela #modabrasileira #tecidos #estampas #confeccao",
    "id": "o2-03",
+   "proporcao": "1080 / 1350",
    "curtidas": 230,
    "comentarios": 39,
    "data": "4 dias"
@@ -298,6 +300,7 @@ window.PERFIL = {
    ],
    "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Pôr do Sol de pertinho 👉 Ref. 13964wB\n\n#estampas #estampaexclusiva #vanguardatextil #estampariadigital #tecidos",
    "id": "o2-06",
+   "proporcao": "1080 / 1350",
    "curtidas": 85,
    "comentarios": 40,
    "data": "1 semana"
@@ -325,6 +328,7 @@ window.PERFIL = {
    ],
    "legenda": "Cartela de cores da estampa Peônia Noite 🎨 As cores que você vê aqui são as que saem no tecido. Ref. MKIT5275\n\n#cartela #estampariadigital #estampaexclusiva #modapraia #estampas",
    "id": "o2-08",
+   "proporcao": "1080 / 1350",
    "curtidas": 385,
    "comentarios": 35,
    "data": "1 semana"
@@ -366,6 +370,7 @@ window.PERFIL = {
    ],
    "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Porcelana de pertinho 👉 Ref. 14212w\n\n#estampas #vanguardatextil #modapraia #modabrasileira #estampaexclusiva",
    "id": "o2-11",
+   "proporcao": "1080 / 1350",
    "curtidas": 289,
    "comentarios": 9,
    "data": "2 semanas"
@@ -393,6 +398,7 @@ window.PERFIL = {
    ],
    "legenda": "Cartela de cores da estampa Rosa Antiga 🎨 As cores que você vê aqui são as que saem no tecido. Ref. 13974wB\n\n#cartela #confeccao #estampariadigital #modapraia #estampas",
    "id": "o2-13",
+   "proporcao": "1080 / 1350",
    "curtidas": 440,
    "comentarios": 33,
    "data": "3 semanas"

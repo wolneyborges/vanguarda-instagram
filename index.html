@@ -110,6 +110,10 @@ body { background: var(--fundo); color: var(--tinta); font-family: Jost, "Helvet
 
 /* toque durante a intro: tudo aparece rápido, sem cortina */
 .rapida { --t0: 0s !important; }
+/* voltando de um perfil: sem intro, tudo já no lugar */
+.pulo { --t0: 0s !important; }
+.pulo .cortina { display: none; }
+.pulo *, .pulo *::before, .pulo *::after { animation-duration: 0s !important; animation-delay: 0s !important; }
 .rapida .cortina { display: none; }
 .rapida .logo *, .rapida .op, .rapida .linha, .rapida .rodape { animation-duration: .5s !important; }
 @media (prefers-reduced-motion: reduce) { .cortina { display: none; } * { animation-duration: .01s !important; animation-delay: 0s !important; } }
@@ -190,15 +194,18 @@ body { background: var(--fundo); color: var(--tinta); font-family: Jost, "Helvet
       // fecha a cortina e abre o perfil
       cortina.style.display = "flex";
       cortina.className = "cortina cobre";
-      setTimeout(() => (location.href = a.href), 1100); // cortina fechada; o perfil abre com as faixas saindo
+      setTimeout(() => (location.href = a.href), 800); // cortina fechada; o perfil abre com as faixas saindo
     };
     nav.appendChild(a);
   });
 
   // toque durante a intro = pular para o fim
   addEventListener("pointerdown", (e) => { if (!e.target.closest(".op") && !document.body.classList.contains("rapida")) document.body.classList.add("rapida"); }, { once: true });
-  // voltar do perfil pelo botão do navegador (bfcache): recarrega para a intro tocar de novo
-  addEventListener("pageshow", (e) => { if (e.persisted) location.reload(); });
+  // intro só ao abrir ou atualizar; voltando de um perfil (seta do app ou botão voltar do celular) vai direto às opções
+  const tipoNav = performance.getEntriesByType("navigation")[0]?.type;
+  let volta = false; try { volta = sessionStorage.getItem("vg-direto") === "1"; sessionStorage.removeItem("vg-direto"); } catch (e) {}
+  if (tipoNav === "back_forward" || (tipoNav !== "reload" && volta)) document.body.classList.add("pulo");
+  addEventListener("pageshow", (e) => { if (e.persisted) { document.body.classList.add("pulo"); cortina.className = "cortina"; cortina.style.display = "none"; } });
 })();
 </script>
 </body>

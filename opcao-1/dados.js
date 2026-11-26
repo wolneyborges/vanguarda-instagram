@@ -231,6 +231,7 @@ window.PERFIL = {
    "legenda": "Ornamento Azul, ref. 14212w. Elegante do tecido ao detalhe 💎\n\n#azul #modabrasileira #confeccao #brasSP #estampariadigital",
    "id": "o1-01",
    "fixado": true,
+   "proporcao": "1080 / 1350",
    "curtidas": 182,
    "comentarios": 34,
    "data": "2 dias"
@@ -257,6 +258,7 @@ window.PERFIL = {
    ],
    "legenda": "Borboleta Azul: o barrado que desce até a barra 🦋 Ref. 14045wB\n\n#barrado #confeccao #vanguardatextil #modapraia #estampas",
    "id": "o1-03",
+   "proporcao": "1080 / 1350",
    "curtidas": 373,
    "comentarios": 24,
    "data": "4 dias"
@@ -298,6 +300,7 @@ window.PERFIL = {
    ],
    "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Borboleta Azul de pertinho 👉 Ref. 14045wB\n\n#estampas #vanguardatextil #modapraia #brasSP #estampariadigital",
    "id": "o1-06",
+   "proporcao": "1080 / 1350",
    "curtidas": 237,
    "comentarios": 39,
    "data": "1 semana"
@@ -323,6 +326,7 @@ window.PERFIL = {
    ],
    "legenda": "Painel de inspiração: Aquarela azul, ref. 13578w 💙\n\n#moodboard #confeccao #estampas #modabrasileira #estampariadigital",
    "id": "o1-08",
+   "proporcao": "1080 / 1350",
    "curtidas": 242,
    "comentarios": 36,
    "data": "1 semana"
@@ -364,6 +368,7 @@ window.PERFIL = {
    ],
    "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Pavão de pertinho 👉 Ref. 14213w\n\n#estampaexclusiva #estampariadigital #modabrasileira #tecidos #brasSP",
    "id": "o1-11",
+   "proporcao": "1080 / 1350",
    "curtidas": 205,
    "comentarios": 35,
    "data": "2 semanas"
@@ -376,6 +381,7 @@ window.PERFIL = {
    ],
    "legenda": "Pôr do sol que vira vestido 🌅 Ref. 13964wB\n\n#barrado #estampariadigital #vanguardatextil #modabrasileira #printdesign",
    "id": "o1-12",
+   "proporcao": "1080 / 1440",
    "curtidas": 343,
    "comentarios": 37,
    "data": "3 semanas"
@@ -417,6 +423,7 @@ window.PERFIL = {
    ],
    "legenda": "Cartela de cores da estampa Jardim Noturno 🎨 As cores que você vê aqui são as que saem no tecido. Ref. 14051wB\n\n#cartela #printdesign #tecidos #estampaexclusiva #modapraia",
    "id": "o1-15",
+   "proporcao": "1080 / 1350",
    "curtidas": 442,
    "comentarios": 24,
    "data": "1 mês"

@@ -77,7 +77,7 @@ function perfil() {
   const temStory = P.destaques?.length;
   const n = P.numeros || {};
   const v = el(`<div class="perfil">
-    <div class="topo"><a href="../index.html" aria-label="Voltar às opções">${ic("voltar")}</a><div class="arroba">${esc(P.usuario)} ${verif(14)}</div>${pontos3}</div>
+    <div class="topo"><a href="../index.html" aria-label="Voltar às opções" onclick="try{sessionStorage.setItem('vg-direto','1')}catch(e){}">${ic("voltar")}</a><div class="arroba">${esc(P.usuario)} ${verif(14)}</div>${pontos3}</div>
     <div class="cab">
       <button class="av ${temStory ? "anel" : ""}" data-av><img src="${P.avatar}" alt=""></button>
       <div class="cab-dir">
@@ -134,7 +134,8 @@ function aba(qual, alvo) {
       const t = p.fixado && fixados.includes(p) ? icPin : p.tipo === "reel" ? icReel : p.midias.length > 1 ? icCarr : "";
       if (t) c.appendChild(el(`<span class="tag">${t}</span>`));
     } else c.appendChild(el(`<span class="views">${ic("olho", 14)}${fmt(p.views ?? 0)}</span>`));
-    c.onclick = () => (p.tipo === "reel" && qual === "reels") ? abrirReels(i) : publicacoes(i, lista);
+    // Reels sempre abre no visualizador de Reels (9:16 inteiro), como no Instagram
+    c.onclick = () => p.tipo === "reel" ? abrirReels(reels.indexOf(p)) : publicacoes(i, lista);
     g.appendChild(c);
   });
   alvo.appendChild(g);
@@ -156,7 +157,7 @@ function cartao(p) {
       <div><b>${esc(P.usuario)}</b> ${verif(12)}${p.local ? `<div style="font-size:12px">${esc(p.local)}</div>` : ""}</div>
       ${p.fixado ? `<span class="fix">${icPin.replace(/#fff/g, "currentColor").replace('width="20" height="20"', 'width="16" height="16"')}</span>` : ""}
       <span style="${p.fixado ? "" : "margin-left:auto"}">${pontos3}</span></div>
-    <div class="midia"><div class="carr"></div>${n > 1 ? `<span class="cont">1/${n}</span><div class="pontos">${"<i></i>".repeat(n)}</div>` : ""}</div>
+    <div class="midia" style="--ar:${p.tipo === "reel" ? "9 / 16" : (p.proporcao || "4 / 5")}"><div class="carr"></div>${n > 1 ? `<span class="cont">1/${n}</span><div class="pontos">${"<i></i>".repeat(n)}</div>` : ""}</div>
     <div class="acoes"><button data-c>${ic("coracao", 26)}</button><button>${ic("coment", 26)}</button>
       <button>${ic("repost", 24)}</button><button>${ic("enviar", 24)}</button><button class="salvar" data-s>${ic("salvar", 24)}</button></div>
     ${legenda(p)}</article>`);

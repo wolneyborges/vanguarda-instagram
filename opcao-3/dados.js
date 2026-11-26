@@ -215,6 +215,7 @@ window.PERFIL = {
    "legenda": "Quatro estampas, uma tarde de verão ☀️ Arrasta para ver o painel completo.\n\n#verao2027 #brasSP #modapraia #modabrasileira #tecidos",
    "id": "o3-00",
    "fixado": true,
+   "proporcao": "1080 / 1440",
    "curtidas": 74,
    "comentarios": 14,
    "data": "1 dia"
@@ -257,6 +258,7 @@ window.PERFIL = {
    ],
    "legenda": "Cartela de cores da estampa Palmeiras Pop 🎨 As cores que você vê aqui são as que saem no tecido. Ref. 14064wB\n\n#cartela #brasSP #modabrasileira #estampaexclusiva #modapraia",
    "id": "o3-03",
+   "proporcao": "1080 / 1350",
    "curtidas": 149,
    "comentarios": 6,
    "data": "4 dias"
@@ -298,6 +300,7 @@ window.PERFIL = {
    ],
    "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Onda Rubi de pertinho 👉 Ref. 14202w\n\n#brasSP #estampariadigital #vanguardatextil #estampas #printdesign",
    "id": "o3-06",
+   "proporcao": "1080 / 1350",
    "curtidas": 404,
    "comentarios": 9,
    "data": "1 semana"
@@ -325,6 +328,7 @@ window.PERFIL = {
    ],
    "legenda": "Cartela de cores da estampa Palmeira Marinho 🎨 As cores que você vê aqui são as que saem no tecido. Ref. MKIT5189BA\n\n#cartela #confeccao #estampariadigital #modapraia #printdesign",
    "id": "o3-08",
+   "proporcao": "1080 / 1350",
    "curtidas": 228,
    "comentarios": 32,
    "data": "1 semana"
@@ -366,6 +370,7 @@ window.PERFIL = {
    ],
    "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Jardim Noturno de pertinho 👉 Ref. 14051wB\n\n#brasSP #confeccao #printdesign #tecidos #estampariadigital",
    "id": "o3-11",
+   "proporcao": "1080 / 1350",
    "curtidas": 95,
    "comentarios": 10,
    "data": "2 semanas"
@@ -393,6 +398,7 @@ window.PERFIL = {
    ],
    "legenda": "Cartela de cores da estampa Aquarela 🎨 As cores que você vê aqui são as que saem no tecido. Ref. 13578w\n\n#cartela #brasSP #confeccao #estampas #modapraia",
    "id": "o3-13",
+   "proporcao": "1080 / 1350",
    "curtidas": 107,
    "comentarios": 9,
    "data": "3 semanas"
