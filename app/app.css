@@ -21,6 +21,19 @@ svg { display: block; }
          box-shadow: 0 0 0 11px #111, 0 0 0 12px #333, 0 40px 120px #000c; }
 }
 
+/* ---------- cortina de estampas ao abrir o perfil (continua a da capa: as faixas saem e revelam a tela) ---------- */
+.cortina { position: fixed; inset: 0; z-index: 100; display: flex; pointer-events: none; background: #f7f3ec; }
+.cortina.saindo { background: transparent; }
+.cortina .fx { flex: 1; position: relative; overflow: hidden; border-left: 1px solid #b98426; }
+.cortina .fx:first-child { border-left: 0; }
+.cortina .fx i { position: absolute; inset: 0; background: center / cover; }
+.cortina.saindo .fx { animation: cort-sai .75s cubic-bezier(.76,0,.24,1) forwards; animation-delay: var(--k); }
+.cortina.saindo .fx i { animation: cort-pan .75s ease-in forwards; animation-delay: var(--k); }
+@keyframes cort-sai { to { transform: translateY(var(--para)); } }
+@keyframes cort-pan { to { transform: translateY(calc(var(--s) * -6%)) scale(1.04); } }
+@media (max-width: 700px) { .cortina .fx:nth-child(n+6) { display: none; } }
+@media (prefers-reduced-motion: reduce) { .cortina { display: none; } }
+
 /* ---------- perfil ---------- */
 .perfil { position: absolute; inset: 0; overflow-y: auto; padding-bottom: 56px; scrollbar-width: none; }
 .perfil::-webkit-scrollbar { display: none; }

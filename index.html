@@ -109,7 +109,7 @@ body { background: var(--fundo); color: var(--tinta); font-family: Jost, "Helvet
 }
 @media (max-height: 640px) and (max-width: 899px) { .op .mini { width: 40px; height: 40px; } .op { grid-template-columns: 40px 1fr auto; padding: 5px 12px 5px 5px; } .miolo { gap: 10px; } .rodape { display: none; } }
 
-/* intro já vista nesta sessão: tudo aparece rápido, sem cortina */
+/* toque durante a intro: tudo aparece rápido, sem cortina */
 .rapida { --t0: 0s !important; }
 .rapida .cortina { display: none; }
 .rapida .logo *, .rapida .op, .rapida .linha, .rapida .rodape { animation-duration: .5s !important; }
@@ -149,10 +149,7 @@ body { background: var(--fundo); color: var(--tinta); font-family: Jost, "Helvet
   const LETRAS = ["0012_a", "0011_n", "0010_g", "0009_u", "0008_a", "0007_r", "0006_d", "0005_a"];
   const PALAVRAS = ["0004_TECIDOS", "0003_MALHAS", "0002_e", "0001_ESTAMPARIA", "0000_DIGITAL"];
 
-  let rapida = false;
-  try { rapida = sessionStorage.getItem("vg-intro") === "1"; sessionStorage.setItem("vg-intro", "1"); } catch (e) {}
-  if (rapida) document.body.classList.add("rapida");
-
+  // a intro toca em TODO carregamento (dono, 26/11/2026)
   const logo = document.querySelector(".logo");
   const peca = (nome, cls, i) => {
     const [x, y, w, h] = P[nome];
@@ -194,15 +191,15 @@ body { background: var(--fundo); color: var(--tinta); font-family: Jost, "Helvet
       // fecha a cortina e abre o perfil
       cortina.style.display = "flex";
       cortina.className = "cortina cobre";
-      setTimeout(() => (location.href = a.href), 750);
+      setTimeout(() => (location.href = a.href), 1100); // cortina fechada; o perfil abre com as faixas saindo
     };
     nav.appendChild(a);
   });
 
   // toque durante a intro = pular para o fim
   addEventListener("pointerdown", (e) => { if (!e.target.closest(".op") && !document.body.classList.contains("rapida")) document.body.classList.add("rapida"); }, { once: true });
-  // voltar do perfil pelo botão do navegador (bfcache): abre a cortina de novo
-  addEventListener("pageshow", (e) => { if (e.persisted) cortina.style.display = "none"; });
+  // voltar do perfil pelo botão do navegador (bfcache): recarrega para a intro tocar de novo
+  addEventListener("pageshow", (e) => { if (e.persisted) location.reload(); });
 })();
 </script>
 </body>

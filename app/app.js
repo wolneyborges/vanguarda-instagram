@@ -276,4 +276,26 @@ const base = el(`<nav class="base"><button>${ic("casa", 26)}</button><button>${i
   <button data-r>${ic("reels", 26)}</button><button>${ic("enviar", 26)}</button><span class="mini"><img src="${P.avatar}" alt=""></span></nav>`);
 $("[data-r]", base).onclick = () => reels.length && abrirReels(0);
 tel.appendChild(base);
+
+/* cortina: a tela abre coberta pelas faixas (como a capa terminou) e elas saem revelando o perfil */
+(function cortina() {
+  const c = document.createElement("div");
+  c.className = "cortina"; c.setAttribute("aria-hidden", "true");
+  const imgs = [];
+  for (let i = 0; i < 9; i++) {
+    const desce = i % 2 === 0, f = document.createElement("div");
+    f.className = "fx";
+    f.style.cssText = `--para:${desce ? "101%" : "-101%"};--s:${desce ? 1 : -1};--k:${(i * 0.05).toFixed(2)}s`;
+    const src = `../midia/abertura/${i + 1}.webp`;
+    f.innerHTML = `<i style="background-image:url(${src})"></i>`;
+    c.appendChild(f);
+    imgs.push(new Promise((ok) => { const im = new Image(); im.onload = im.onerror = ok; im.src = src; }));
+  }
+  document.body.appendChild(c);
+  // espera as estampas (no máx. 1,2 s), segura um instante e abre
+  Promise.race([Promise.all(imgs), new Promise((ok) => setTimeout(ok, 1200))]).then(() => {
+    setTimeout(() => c.classList.add("saindo"), 250);
+    setTimeout(() => c.remove(), 250 + 750 + 450 + 100);
+  });
+})();
 })();
