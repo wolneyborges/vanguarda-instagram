@@ -61,8 +61,9 @@ h2 { font-weight: 500; font-size: clamp(26px, 4.6vw, 40px); line-height: 1.1; ma
 .mes.on { transform: translateY(-6px); box-shadow: 0 14px 28px rgba(22,20,18,.25); outline: 2px solid var(--tinta); outline-offset: 2px; }
 .detalhe { margin-top: 18px; background: var(--papel); border: 1px solid var(--linha); display: grid; grid-template-columns: 300px 1fr; min-height: 300px; animation: aparece .5s var(--fluido); }
 @keyframes aparece { from { opacity: 0; transform: translateY(12px); } }
-.detalhe .foto { background: var(--img) center / cover; position: relative; }
-.detalhe .foto span { position: absolute; left: 14px; top: 14px; color: #fff; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; padding: 5px 10px; font-weight: 500; }
+.detalhe { align-items: start; }
+.detalhe .foto { background: var(--img) center / cover; position: relative; aspect-ratio: 4 / 5; }
+.detalhe .foto span { position: absolute; left: 12px; bottom: 12px; white-space: nowrap; color: #fff; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; padding: 5px 10px; font-weight: 500; }
 .detalhe .foto span.verao { background: var(--verao); } .detalhe .foto span.inverno { background: var(--inverno); }
 .detalhe .txt { padding: 24px 26px; display: grid; gap: 16px; align-content: start; }
 .detalhe h3 { font-weight: 500; font-size: 30px; line-height: 1.05; }
@@ -199,7 +200,7 @@ h2 { font-weight: 500; font-size: clamp(26px, 4.6vw, 40px); line-height: 1.1; ma
   .mes { scroll-snap-align: start; height: 118px; }
   .estacoes { display: none; }
   .detalhe { grid-template-columns: 1fr; }
-  .detalhe .foto { height: 170px; }
+  .detalhe .foto { width: min(100%, 360px); justify-self: center; }
   .detalhe .txt { padding: 18px; }
   .caixa { grid-template-columns: 1fr; }
   .modal { padding: 0; align-items: end; }
