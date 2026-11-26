@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f3ec">
+<title>Vanguarda — Proposta do Instagram</title>
+<meta name="description" content="Proposta de gestão do Instagram da Vanguarda: como funciona, pacotes, valores e fontes da pesquisa.">
+<link rel="icon" href="../midia/logo/0013_Logo-marca.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Página de ganhos — mesma identidade da capa (marfim, arco-íris do V, selo dourado). Valores: proposta/PESQUISA-PRECOS.md §3 */
+:root { --fundo: #f7f3ec; --papel: #fffdf9; --tinta: #161412; --cinza: #6d6863; --linha: #e6dfd5; --ouro: #b98426; --ouro-claro: #e8c46a;
+  --arco: linear-gradient(90deg, #ff2fb3, #8a3cff, #1f6bff, #10c8e8, #2fdc6a, #ffe23a, #ff8a1f); --fluido: cubic-bezier(.22,1,.36,1); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--fundo); color: var(--tinta); font: 300 16px/1.6 Jost, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+.casca { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+section { padding: 64px 0; }
+.selo { display: inline-flex; align-items: center; gap: 10px; font-weight: 500; font-size: 11px; letter-spacing: .32em; text-transform: uppercase;
+  background: linear-gradient(100deg, var(--ouro) 0 40%, var(--ouro-claro) 50%, var(--ouro) 60% 100%) 0 0 / 250% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: brilho 4.5s ease-in-out infinite; }
+.selo::before, .selo::after { content: "◆"; font-size: .8em; -webkit-text-fill-color: var(--ouro); }
+@keyframes brilho { 0%, 55% { background-position: 100% 0; } 100% { background-position: -50% 0; } }
+h2 { font-weight: 500; font-size: clamp(28px, 5vw, 44px); line-height: 1.1; letter-spacing: .01em; margin: 12px 0 14px; }
+.intro { color: var(--cinza); max-width: 60ch; }
+.arco { height: 2px; width: 120px; background: var(--arco); border-radius: 2px; margin: 18px 0 0; }
+.surge { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--fluido), transform .8s var(--fluido); }
+.surge.on { opacity: 1; transform: none; }
+
+/* topo */
+.topo { position: sticky; top: 0; z-index: 10; background: rgba(247,243,236,.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--linha); }
+.topo .casca { display: flex; align-items: center; justify-content: space-between; height: 58px; }
+.topo img { height: 30px; display: block; }
+.topo a { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--tinta); padding-bottom: 2px; }
+
+/* abertura */
+.hero { padding: 72px 0 56px; text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -1;
+  background: radial-gradient(40vmax 26vmax at 15% 20%, #ff2fb31c, transparent 70%), radial-gradient(40vmax 26vmax at 88% 30%, #ffb21f22, transparent 70%), radial-gradient(44vmax 30vmax at 50% 100%, #10c8e81a, transparent 70%); }
+.hero img.v { width: 120px; animation: v 1.2s var(--fluido) both; filter: drop-shadow(0 12px 22px rgba(138,60,255,.25)); }
+@keyframes v { from { opacity: 0; transform: scale(.4) rotate(-25deg); } }
+.hero h1 { font-weight: 500; font-size: clamp(34px, 7vw, 68px); line-height: 1.04; margin: 18px auto 16px; max-width: 14ch; }
+.hero h1 em { font-style: normal; background: var(--arco); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { color: var(--cinza); max-width: 52ch; margin: 0 auto; }
+.hero .arco { margin: 26px auto 0; }
+
+/* o que entrego */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-top: 30px; }
+.card { background: var(--papel); border: 1px solid var(--linha); padding: 22px 20px; }
+.card b { display: block; font-weight: 500; font-size: 17px; margin: 10px 0 4px; }
+.card p { font-size: 14.5px; color: var(--cinza); }
+.card .ic { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--arco); color: #fff; font-size: 18px; }
+
+/* como funciona (semana) */
+.semana { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin-top: 30px; border-top: 1px solid var(--tinta); }
+.passo { padding: 18px 18px 18px 0; border-bottom: 1px solid var(--linha); }
+.passo span { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--ouro); font-weight: 500; }
+.passo b { display: block; font-weight: 500; font-size: 18px; margin: 4px 0; }
+.passo p { font-size: 14.5px; color: var(--cinza); }
+
+/* pacotes */
+.planos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 34px; align-items: stretch; }
+.plano { position: relative; background: var(--papel); border: 1px solid var(--linha); padding: 28px 22px 22px; display: flex; flex-direction: column; cursor: pointer; transition: transform .35s var(--fluido), box-shadow .35s, border-color .3s; }
+.plano:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(22,20,18,.1); }
+.plano.sel { border-color: var(--tinta); box-shadow: 0 18px 40px rgba(22,20,18,.12); }
+.plano.destaque::before { content: ""; position: absolute; inset: -2px; z-index: -1; background: var(--arco); }
+.plano .tag { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--tinta); color: #fff; font-size: 10px; letter-spacing: .24em; text-transform: uppercase; padding: 5px 12px; white-space: nowrap; }
+.plano h3 { font-weight: 500; font-size: 13px; letter-spacing: .26em; text-transform: uppercase; color: var(--cinza); }
+.preco { font-weight: 500; font-size: 46px; line-height: 1; margin: 12px 0 2px; font-variant-numeric: tabular-nums; }
+.preco small { font-size: 18px; font-weight: 400; margin-right: 4px; }
+.plano .mes { font-size: 13px; color: var(--cinza); }
+.plano ul { list-style: none; margin: 18px 0 0; display: grid; gap: 8px; font-size: 14.5px; }
+.plano li { display: grid; grid-template-columns: 18px 1fr; gap: 8px; }
+.plano li::before { content: "✓"; font-weight: 600; color: #1f8a4c; }
+.plano li.nao { color: #b3aca4; }
+.plano li.nao::before { content: "—"; color: #c9c2b9; }
+.plano .ver { margin-top: auto; padding-top: 20px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--cinza); }
+.plano.sel .ver { color: var(--tinta); font-weight: 500; }
+
+/* calendário */
+.cal-cab { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-top: 26px; font-size: 13px; color: var(--cinza); }
+.cal-cab i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-top: 14px; }
+.cal .dsem { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--cinza); text-align: center; padding-bottom: 4px; }
+.dia { position: relative; aspect-ratio: 1 / 1.05; background: var(--papel); border: 1px solid var(--linha); padding: 6px; font-size: 12px; display: flex; flex-direction: column; justify-content: space-between; transition: transform .3s var(--fluido), background .3s; }
+.dia.vazio { background: transparent; border-color: transparent; }
+.dia .n { color: var(--cinza); }
+.dia .t { font-weight: 500; font-size: 11px; line-height: 1.15; border-radius: 6px; padding: 3px 5px; color: #fff; align-self: flex-start; animation: pop .45s var(--fluido) both; }
+.dia .st { position: absolute; top: 6px; right: 6px; width: 8px; height: 8px; border-radius: 50%; background: #d62976; }
+.dia.prod { background: #f1ebe1; }
+.dia.prod .t { color: var(--tinta); background: none; padding: 0; font-weight: 400; }
+@keyframes pop { from { opacity: 0; transform: scale(.6); } }
+.cal-tot { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 14px; font-size: 14px; }
+.cal-tot b { font-weight: 600; }
+
+/* comparação */
+.comp { width: 100%; border-collapse: collapse; margin-top: 28px; font-size: 15px; }
+.comp th, .comp td { text-align: left; padding: 14px 12px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+.comp th { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--cinza); font-weight: 500; }
+.comp td:first-child { font-weight: 500; }
+.comp tr.eu td { background: var(--papel); border-bottom: 2px solid var(--tinta); }
+.comp tr.eu td:first-child { position: relative; }
+.comp tr.eu td:first-child::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--arco); }
+.comp .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* incluso / fora */
+.duas { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
+.duas > div { background: var(--papel); border: 1px solid var(--linha); padding: 22px; }
+.duas h3 { font-weight: 500; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 10px; }
+.duas ul { list-style: none; display: grid; gap: 7px; font-size: 15px; color: var(--cinza); }
+
+/* fontes */
+.fontes { margin-top: 26px; display: grid; gap: 0; border-top: 1px solid var(--tinta); }
+.fonte { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; padding: 14px 0; border-bottom: 1px solid var(--linha); }
+.fonte b { font-weight: 500; }
+.fonte p { grid-column: 1 / -1; font-size: 14px; color: var(--cinza); }
+.fonte a { font-size: 13px; word-break: break-all; color: #1f4fd1; }
+.fonte .q { font-size: 12px; color: var(--cinza); white-space: nowrap; }
+.nota { margin-top: 16px; font-size: 13px; color: var(--cinza); }
+
+.fim { text-align: center; padding: 72px 0 90px; }
+.fim h2 { max-width: 18ch; margin: 14px auto; }
+.bt { display: inline-flex; align-items: center; gap: 10px; height: 50px; padding: 0 26px; background: var(--tinta); color: #fff; text-decoration: none; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; transition: transform .3s var(--fluido); }
+.bt:hover { transform: translateY(-2px); }
+.bt.vazio { background: none; color: var(--tinta); border: 1px solid var(--tinta); }
+.fim .bts { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 22px; }
+
+@media (max-width: 820px) {
+  section { padding: 48px 0; }
+  .planos { grid-template-columns: 1fr; gap: 22px; }
+  .plano.destaque { order: -1; }
+  .duas { grid-template-columns: 1fr; }
+  .comp thead { display: none; }
+  .comp, .comp tbody, .comp tr, .comp td { display: block; width: 100%; }
+  .comp tr { border-bottom: 1px solid var(--linha); padding: 10px 0; }
+  .comp td { border: 0; padding: 3px 12px; }
+  .comp .num { white-space: normal; }
+  .comp td[data-r]::before { content: attr(data-r) ": "; color: var(--cinza); font-size: 13px; }
+  .dia { padding: 3px; font-size: 10px; }
+  .dia .t { font-size: 0; width: 12px; height: 12px; padding: 0; border-radius: 50%; }
+  .dia.prod .t { font-size: 9px; width: auto; height: auto; }
+  .dia .st { width: 6px; height: 6px; top: 4px; right: 4px; }
+}
+@media (prefers-reduced-motion: reduce) { .surge { opacity: 1; transform: none; transition: none; } * { animation: none !important; } }
+</style>
+</head>
+<body>
+<header class="topo"><div class="casca"><img src="../midia/logo/0013_Logo-marca.webp" alt="Vanguarda"><a href="../">Ver as 3 opções</a></div></header>
+
+<section class="hero"><div class="casca">
+  <img class="v" src="../midia/logo/0013_Logo-marca.webp" alt="">
+  <div class="selo">Proposta · Instagram</div>
+  <h1>O Instagram da Vanguarda, <em>todo dia</em>.</h1>
+  <p>Conteúdo feito por quem está dentro da fábrica: estampa real, tecido real, bastidor real. Com design, vídeo em motion e inteligência artificial, sem precisar contratar mais ninguém.</p>
+  <div class="arco"></div>
+</div></section>
+
+<section><div class="casca">
+  <div class="selo surge">O que eu entrego</div>
+  <h2 class="surge">Uma pessoa, quatro funções.</h2>
+  <p class="intro surge">Normalmente isso seria um social media, um designer, um editor de vídeo e alguém para filmar a produção.</p>
+  <div class="cards">
+    <div class="card surge"><div class="ic">✦</div><b>Estratégia e calendário</b><p>Planejamento do mês, legendas, hashtags, bio e destaques sempre atualizados.</p></div>
+    <div class="card surge"><div class="ic">▶</div><b>Reels com motion</b><p>Vídeos com animação da marca, no padrão dos perfis grandes de moda.</p></div>
+    <div class="card surge"><div class="ic">◐</div><b>Design e imagem com IA</b><p>Carrosséis, posts e imagens de tecidos e ambientes geradas por inteligência artificial.</p></div>
+    <div class="card surge"><div class="ic">●</div><b>Bastidor real, todo dia</b><p>Estou na fábrica: filmo a máquina, os rolos e os pedidos saindo. Agência nenhuma tem isso.</p></div>
+  </div>
+</div></section>
+
+<section><div class="casca">
+  <div class="selo surge">Como funciona</div>
+  <h2 class="surge">Sem tirar tempo da fábrica.</h2>
+  <p class="intro surge">A produção da semana é feita no fim de semana, em casa, com um assistente de IA que eu configuro para a Vanguarda. Durante a semana só publico, filmo o bastidor e respondo.</p>
+  <div class="semana">
+    <div class="passo surge"><span>Fim de semana</span><b>Produção</b><p>Os posts e Reels da semana ficam prontos e agendados.</p></div>
+    <div class="passo surge"><span>Segunda</span><b>Aprovação</b><p>Você vê o que vai ao ar na semana. Ajuste rápido, se precisar.</p></div>
+    <div class="passo surge"><span>Durante a semana</span><b>No ar</b><p>Publicação, stories do dia a dia e respostas a comentários e mensagens.</p></div>
+    <div class="passo surge"><span>Fim do mês</span><b>Relatório</b><p>Alcance, seguidores, salvamentos e o que mais trouxe pedido.</p></div>
+  </div>
+</div></section>
+
+<section id="pacotes"><div class="casca">
+  <div class="selo surge">Pacotes</div>
+  <h2 class="surge">Valor fixo por mês.</h2>
+  <p class="intro surge">Adicional mensal, à parte do salário. Toque num pacote para ver o mês dele no calendário.</p>
+  <div class="planos"></div>
+</div></section>
+
+<section><div class="casca">
+  <div class="selo surge">Calendário</div>
+  <h2 class="surge">Um mês de exemplo: <span id="cal-nome"></span>.</h2>
+  <div class="cal-cab surge"></div>
+  <div class="cal surge"></div>
+  <div class="cal-tot surge"></div>
+</div></section>
+
+<section><div class="casca">
+  <div class="selo surge">Comparação</div>
+  <h2 class="surge">Quanto custaria de outro jeito.</h2>
+  <table class="comp surge">
+    <thead><tr><th>Alternativa</th><th>Custo por mês</th><th>O que entrega</th></tr></thead>
+    <tbody>
+      <tr><td>Contratar um social media (CLT, São Paulo)</td><td data-r="Custo" class="num">R$ 4.093 de salário médio + encargos e benefícios <sup>[1]</sup></td><td data-r="Entrega">Posts. Vídeo e motion costumam ficar de fora.</td></tr>
+      <tr><td>Agência ou freelancer</td><td data-r="Custo" class="num">R$ 1.200 a R$ 6.000 <sup>[4][5]</sup></td><td data-r="Entrega">Posts. Alguém da fábrica ainda precisa filmar e mandar o material.</td></tr>
+      <tr><td>Reels com motion, avulso</td><td data-r="Custo" class="num">R$ 600 a R$ 2.000 cada <sup>[6]</sup></td><td data-r="Entrega">Só o vídeo.</td></tr>
+      <tr class="eu"><td>Eu, dentro da Vanguarda</td><td data-r="Custo" class="num"><b>R$ 2.000 a R$ 3.000</b></td><td data-r="Entrega">Tudo acima, com bastidor real e ferramentas pagas por mim.</td></tr>
+    </tbody>
+  </table>
+</div></section>
+
+<section><div class="casca">
+  <div class="duas">
+    <div class="surge"><h3>Incluso, sem custo extra</h3><ul>
+      <li>✓ Todas as ferramentas (IA, edição, design), pagas por mim</li>
+      <li>✓ Montagem do perfil: bio, destaques e capas</li>
+      <li>✓ Modelos visuais da marca para posts e stories</li>
+      <li>✓ Fotos e vídeos do bastidor da fábrica</li></ul></div>
+    <div class="surge"><h3>Fica de fora</h3><ul>
+      <li>— Verba de anúncio pago (vai direto para a Meta)</li>
+      <li>— Ensaio fotográfico com modelo</li>
+      <li>— Gravação fora da fábrica</li></ul></div>
+  </div>
+</div></section>
+
+<section><div class="casca">
+  <div class="selo surge">Fontes da pesquisa</div>
+  <h2 class="surge">Números de pesquisa real.</h2>
+  <p class="intro surge">Valores de mercado de 2026, consultados em 26/11/2026. Cada um com o link de onde veio.</p>
+  <div class="fontes"></div>
+  <p class="nota surge">Não existe tabela oficial de preço de social media. Salários vêm do Novo CAGED (governo federal), dados de vagas com carteira assinada. Preços de serviço vêm de guias de mercado do setor.</p>
+</div></section>
+
+<section class="fim"><div class="casca">
+  <div class="selo surge">Próximo passo</div>
+  <h2 class="surge">Começar com 3 meses e medir o resultado.</h2>
+  <p class="intro surge" style="margin:0 auto">Em 3 meses o Instagram já mostra números. No fim do período, revemos o pacote com o relatório na mão.</p>
+  <div class="bts surge"><a class="bt" href="../">Ver as 3 opções</a><a class="bt vazio" href="#pacotes">Rever pacotes</a></div>
+</div></section>
+
+<script>
+(() => {
+  const PLANOS = [
+    { id: "essencial", nome: "Essencial", preco: 2000, posts: 12, reels: 4, ritmo: "3 posts por semana",
+      itens: ["12 posts no mês (4 Reels)", "Stories 3 vezes por semana", "Calendário do mês", "Bio, destaques e fixados", "Relatório simples no fim do mês"],
+      nao: ["Comentários e mensagens", "Campanhas de datas especiais"] },
+    { id: "profissional", nome: "Profissional", preco: 2500, posts: 20, reels: 8, ritmo: "post todo dia útil", destaque: true,
+      itens: ["20 posts no mês (8 Reels com motion)", "Stories todo dia útil", "Comentários e mensagens nos dias úteis", "Calendário do mês", "Bio, destaques e fixados", "Campanhas de datas especiais", "Relatório mensal"] },
+    { id: "completo", nome: "Completo", preco: 3000, posts: 30, reels: 12, ritmo: "post todo dia",
+      itens: ["30 posts no mês (12 Reels com motion)", "Stories todo dia", "Comentários e mensagens todo dia", "Calendário do mês", "Bio, destaques e fixados", "Campanhas e lançamentos de coleção", "Relatório + reunião mensal"] },
+  ];
+  const FONTES = [
+    { n: 1, t: "Salario.com.br — Social Media / Analista de Redes Sociais (CBO 2534-05), São Paulo", q: "atualizado em 03/09/2026",
+      p: "Média de R$ 4.093/mês em SP e R$ 2.872 no Brasil, com base no Novo CAGED (22.359 profissionais com carteira, últimos 12 meses).",
+      u: "https://www.salario.com.br/profissao/social-media-analista-de-redes-sociais-253405/sao-paulo-sp/" },
+    { n: 2, t: "Novo CAGED — Analista de mídias sociais (CBO 2534-05), via Buscador NCM", q: "out/2025 a set/2026",
+      p: "Salário de admissão: mediana de R$ 2.301; os 10% mais altos, R$ 4.707.", u: "https://buscadorncm.com.br/cbo/253405" },
+    { n: 3, t: "Glassdoor — Salário de Social Media em São Paulo", q: "2026",
+      p: "Faixa típica de R$ 1.894 a R$ 6.088, com base em 906 salários informados.",
+      u: "https://www.glassdoor.com.br/Sal%C3%A1rios/s%C3%A3o-paulo-social-media-sal%C3%A1rio-SRCH_IL.0,9_IM1009_KO10,22.htm" },
+    { n: 4, t: "FreelaSemCrise — Gestão de Redes Sociais: quanto cobrar em 2026", q: "2026",
+      p: "Gestão completa de perfis: R$ 1.200 a R$ 6.000 por mês.", u: "https://www.freelasemcrise.com.br/quanto-cobrar/gestao-redes-sociais" },
+    { n: 5, t: "Jamile Fernandes — Quanto ganha um social media em 2026", q: "2026",
+      p: "Gestão para pequenas empresas: R$ 1.200 a R$ 3.500 por mês. Pleno CLT: R$ 2.800 a R$ 4.800.",
+      u: "https://jamilefernandes.com.br/blog/quanto-ganha-um-social-media-em-2026-pesquisa-salarial" },
+    { n: 6, t: "FreelaSemCrise — Produção de Reels: quanto cobrar em 2026", q: "2026",
+      p: "Reels: R$ 300 a R$ 2.500 por vídeo; com motion graphics, R$ 600 a R$ 2.000.", u: "https://www.freelasemcrise.com.br/quanto-cobrar/producao-reels" },
+  ];
+  const TIPOS = { reels: ["Reels", "#d62976"], carr: ["Carrossel", "#4f5bd5"], post: ["Post", "#fa7e1e"] };
+
+  // ── pacotes ──
+  const caixa = document.querySelector(".planos");
+  let atual = PLANOS.find((p) => p.destaque);
+  PLANOS.forEach((p) => {
+    const d = document.createElement("article");
+    d.className = "plano surge" + (p.destaque ? " destaque" : "");
+    d.innerHTML = `${p.destaque ? '<span class="tag">Recomendado</span>' : ""}<h3>${p.nome}</h3>
+      <div class="preco"><small>R$</small><span data-v="${p.preco}">0</span></div><div class="mes">por mês · ${p.ritmo}</div>
+      <ul>${p.itens.map((i) => `<li>${i}</li>`).join("")}${(p.nao || []).map((i) => `<li class="nao">${i}</li>`).join("")}</ul>
+      <div class="ver">Ver no calendário ↓</div>`;
+    d.onclick = () => { atual = p; marcar(); calendario(); };
+    p.el = d; caixa.appendChild(d);
+  });
+  const marcar = () => PLANOS.forEach((p) => p.el.classList.toggle("sel", p === atual));
+
+  // ── calendário de exemplo (mês seguinte ao atual) ──
+  const hoje = new Date(), ano = hoje.getFullYear() + (hoje.getMonth() === 11 ? 1 : 0), mes = (hoje.getMonth() + 1) % 12;
+  const nomeMes = new Date(ano, mes, 1).toLocaleDateString("pt-BR", { month: "long", year: "numeric" });
+  document.getElementById("cal-nome").textContent = nomeMes;
+  document.querySelector(".cal-cab").innerHTML = Object.values(TIPOS).map(([n, c]) => `<span><i style="background:${c}"></i>${n}</span>`).join("") +
+    `<span><i style="background:#d62976;width:8px;height:8px"></i>Stories</span><span><i style="background:#e6dfd5"></i>Produção da semana</span>`;
+  function calendario() {
+    const p = atual, cal = document.querySelector(".cal");
+    const dias = new Date(ano, mes + 1, 0).getDate(), ini = new Date(ano, mes, 1).getDay();
+    // dias de post conforme o ritmo do pacote
+    const lista = [];
+    for (let d = 1; d <= dias; d++) {
+      const s = new Date(ano, mes, d).getDay();
+      const ok = p.posts >= 30 ? true : p.posts >= 20 ? s >= 1 && s <= 5 : [1, 3, 5].includes(s);
+      if (ok) lista.push(d);
+    }
+    // espalha os posts pelo mês inteiro e os Reels entre eles, por igual
+    const posts = Array.from({ length: Math.min(p.posts, lista.length) }, (_, i) => lista[Math.floor(i * lista.length / Math.min(p.posts, lista.length))]);
+    const idxReels = new Set(Array.from({ length: p.reels }, (_, i) => Math.floor(i * posts.length / p.reels)));
+    const tipo = {}; let alt = 0; posts.forEach((d, i) => (tipo[d] = idxReels.has(i) ? "reels" : alt++ % 2 ? "post" : "carr"));
+    const stories = (s) => p.posts >= 30 ? true : p.posts >= 20 ? s >= 1 && s <= 5 : [2, 4, 6].includes(s);
+    let h = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"].map((x) => `<div class="dsem">${x}</div>`).join("");
+    for (let i = 0; i < ini; i++) h += `<div class="dia vazio"></div>`;
+    let nS = 0;
+    for (let d = 1; d <= dias; d++) {
+      const s = new Date(ano, mes, d).getDay(), t = tipo[d], st = stories(s) && (nS++, true);
+      h += `<div class="dia${s === 6 && p.posts < 30 ? " prod" : ""}"><span class="n">${d}</span>${st ? '<span class="st"></span>' : ""}` +
+        (t ? `<span class="t" style="background:${TIPOS[t][1]};animation-delay:${d * 18}ms">${TIPOS[t][0]}</span>` : s === 6 && p.posts < 30 ? '<span class="t">Produção</span>' : "") + `</div>`;
+    }
+    cal.innerHTML = h;
+    const cont = (k) => Object.values(tipo).filter((x) => x === k).length;
+    document.querySelector(".cal-tot").innerHTML = `<span><b>${p.nome}</b> · R$ ${p.preco.toLocaleString("pt-BR")}/mês</span>` +
+      `<span><b>${posts.length}</b> posts</span><span><b>${cont("reels")}</b> Reels</span><span><b>${cont("carr")}</b> carrosséis</span><span><b>${nS}</b> dias com stories</span>`;
+  }
+  marcar(); calendario();
+
+  // ── fontes ──
+  document.querySelector(".fontes").innerHTML = FONTES.map((f) => `<div class="fonte surge"><b>[${f.n}] ${f.t}</b><span class="q">${f.q}</span><p>${f.p}</p><a href="${f.u}" target="_blank" rel="noopener">${f.u}</a></div>`).join("");
+
+  // ── aparecer ao rolar + contar os preços ──
+  const conta = (el) => { const alvo = +el.dataset.v, t0 = performance.now();
+    const f = (t) => { const k = Math.min(1, (t - t0) / 1100), e = 1 - Math.pow(1 - k, 3); el.textContent = Math.round(alvo * e).toLocaleString("pt-BR"); if (k < 1) requestAnimationFrame(f); };
+    requestAnimationFrame(f); };
+  const vis = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return;
+    e.target.classList.add("on"); e.target.querySelectorAll("[data-v]").forEach(conta); vis.unobserve(e.target); }), { threshold: .15 });
+  document.querySelectorAll(".surge").forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + "ms"; vis.observe(el); });
+})();
+</script>
+</body>
+</html>
