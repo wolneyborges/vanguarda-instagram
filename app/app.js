@@ -77,7 +77,7 @@ function perfil() {
   const temStory = P.destaques?.length;
   const n = P.numeros || {};
   const v = el(`<div class="perfil">
-    <div class="topo"><a href="../" aria-label="Voltar às opções">${ic("voltar")}</a><div class="arroba">${esc(P.usuario)} ${verif(14)}</div>${pontos3}</div>
+    <div class="topo"><a href="../index.html" aria-label="Voltar às opções">${ic("voltar")}</a><div class="arroba">${esc(P.usuario)} ${verif(14)}</div>${pontos3}</div>
     <div class="cab">
       <button class="av ${temStory ? "anel" : ""}" data-av><img src="${P.avatar}" alt=""></button>
       <div class="cab-dir">

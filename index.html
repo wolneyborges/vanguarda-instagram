@@ -182,7 +182,7 @@ body { background: var(--fundo); color: var(--tinta); font-family: Jost, "Helvet
   OPCOES.forEach((o, i) => {
     const a = document.createElement("a");
     a.className = "op" + (o.pronta ? "" : " breve");
-    a.href = o.pronta ? `opcao-${o.n}/` : "#";
+    a.href = o.pronta ? `opcao-${o.n}/index.html` : "#"; // caminho completo: funciona também aberto do disco
     a.style.setProperty("--i", i);
     a.innerHTML = `<span class="mini"><span style="background-image:url(${o.img})"></span></span><span><small>${o.sub}</small><b>${o.nome}</b></span><span class="seta">→</span>`;
     a.onclick = (e) => {
