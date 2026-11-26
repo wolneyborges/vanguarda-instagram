@@ -78,10 +78,9 @@ body { background: var(--fundo); color: var(--tinta); font-family: Jost, "Helvet
   background: #fffdf9; border: 1px solid var(--tinta); color: var(--tinta); text-decoration: none; cursor: pointer; font: inherit;
   opacity: 0; animation: aparece .6s var(--fluido) forwards; animation-delay: calc(var(--t0) + 2.25s + var(--i) * .1s);
   transition: transform .3s var(--fluido), background .3s, color .3s, box-shadow .3s; }
-.op::before { content: ""; position: absolute; inset: -1px; background: var(--arco); z-index: -1; opacity: 0; transition: opacity .3s; }
 .op:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(22,20,18,.14); }
 .op:active { transform: scale(.98); }
-.op .mini { width: 64px; height: 64px; border-radius: 50%; padding: 2px; background: var(--arco); }
+.op .mini { width: 64px; height: 64px; border-radius: 50%; padding: 2px; background: var(--tinta); }
 .op .mini span { display: block; width: 100%; height: 100%; border-radius: 50%; border: 2px solid #fffdf9; background: center / cover; }
 .op small { display: block; font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: var(--cinza); }
 .op b { display: block; font-weight: 500; font-size: 17px; letter-spacing: .06em; text-transform: uppercase; margin-top: 2px; }

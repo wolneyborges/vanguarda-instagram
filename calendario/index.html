@@ -124,9 +124,10 @@ h2 { font-weight: 500; font-size: clamp(26px, 4.6vw, 40px); line-height: 1.1; ma
 .arte { position: absolute; inset: 0; background: var(--img) center / cover; display: flex; flex-direction: column; justify-content: flex-end; padding: 9%; color: #fff; overflow: hidden; }
 .arte::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22,20,18,.05) 35%, rgba(22,20,18,.78)); }
 .arte > * { position: relative; }
-.arte .lg { width: 22%; max-width: 70px; margin-bottom: auto; filter: drop-shadow(0 2px 6px #0006); }
-.arte b { font-weight: 600; font-size: clamp(14px, 6.5cqw, 34px); line-height: 1.05; text-transform: uppercase; letter-spacing: .02em; }
-.arte i { font-style: normal; font-size: clamp(10px, 3.2cqw, 16px); letter-spacing: .14em; text-transform: uppercase; opacity: .9; margin-top: 4px; }
+.arte .lg { position: absolute; top: 7%; left: 7%; width: 18%; max-width: 64px; height: auto; object-fit: contain; filter: drop-shadow(0 2px 6px #0006); }
+.dia .arte .lg { top: 24px; left: 7px; width: 22%; }
+.arte b { font-weight: 600; font-size: clamp(9px, 6.5cqw, 34px); line-height: 1.05; text-transform: uppercase; letter-spacing: .02em; }
+.arte i { font-style: normal; font-size: clamp(7px, 3.2cqw, 16px); letter-spacing: .14em; text-transform: uppercase; opacity: .9; margin-top: 4px; }
 .arte .faixa { height: 3px; width: 40%; background: var(--arco); margin-top: 8px; }
 .th, .slide { container-type: inline-size; }
 .th video, .th img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -157,6 +158,11 @@ h2 { font-weight: 500; font-size: clamp(26px, 4.6vw, 40px); line-height: 1.1; ma
 .prev .leg2 { padding: 2px 12px 14px; line-height: 1.4; }
 .prev .leg2 b { font-weight: 600; margin-right: 4px; }
 .prev .leg2 .h { color: #e0f1ff; }
+.prev .leg2 .tags { display: block; margin-top: 8px; }
+.post-info { background: var(--papel); border: 1px solid var(--linha); padding: 12px 14px; }
+.post-info p { font-size: 14px; line-height: 1.45; margin: 6px 0 10px; }
+.post-info .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.post-info .chips span { font-size: 12.5px; padding: 3px 9px; border: 1px solid var(--linha); background: #fff; color: #1f4f8a; }
 .lado { padding: 26px 26px 22px; display: grid; gap: 16px; align-content: start; }
 .lado .cab small { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--cinza); }
 .lado h3 { font-weight: 500; font-size: 26px; line-height: 1.1; margin: 4px 0 8px; padding-right: 36px; }
@@ -352,7 +358,11 @@ function abrir(d) {
   const midia = p.tipo === "reels"
     ? `<div class="mid reel"><div class="carr"><div class="slide"><video src="${p.video}" poster="${p.capa}" autoplay muted loop playsinline></video></div></div></div>`
     : `<div class="mid"><div class="carr">${p.slides.map((sl) => `<div class="slide">${arte(sl)}</div>`).join("")}</div>${p.slides.length > 1 ? `<span class="cont">1/${p.slides.length}</span><div class="pts">${"<i></i>".repeat(p.slides.length)}</div>` : ""}</div>`;
-  const leg = esc(p.legenda).replace(/#[\wÀ-ú]+/g, (h) => `<span class="h">${h}</span>`);
+  // hashtags: as do tema + as fixas da marca, 5 por post
+  const proprias = p.legenda.match(/#[\wÀ-ú]+/g) || [];
+  const tags = [...new Set([...proprias, "#vanguardatextil", "#estampariadigital", "#tecidos", "#confeccao", "#modabrasileira"])].slice(0, 5);
+  const texto = p.legenda.replace(/\s*#[\wÀ-ú]+/g, "").trim();
+  const leg = `${esc(texto)}<span class="tags">${tags.map((h) => `<span class="h">${h}</span>`).join(" ")}</span>`;
   const m = document.createElement("div");
   m.className = "modal";
   m.innerHTML = `<div class="fundo"></div><div class="caixa" role="dialog" aria-modal="true">
@@ -361,7 +371,8 @@ function abrir(d) {
       <div class="acs">♡ 💬 ↻ ✈</div><div class="leg2">${ok ? `<b>vanguardatextil</b>${leg}` : "<i>Legenda em produção</i>"}</div></div>
     <div class="lado">
       <div class="cab"><small>${dataLonga(d)} de 2026 · ${TIPO[p.tipo]}</small><h3>${esc(p.titulo)}</h3><span class="st ${s}">${ROT[s]}</span></div>
-      ${ok ? `<div><div class="rot">Comentários</div><div class="coms"></div></div>
+      ${ok ? `<div class="post-info"><div class="rot">Como vai ser postado</div><p>${esc(texto)}</p><div class="chips">${tags.map((h) => `<span>${h}</span>`).join("")}</div></div>
+        <div><div class="rot">Comentários</div><div class="coms"></div></div>
         <div class="form"><input type="text" placeholder="Seu nome" value="${esc(nome)}" maxlength="40"><textarea placeholder="Escreva um comentário ou o ajuste que você quer…" maxlength="600"></textarea><div class="erro"></div>
         <div class="bts"><button class="bt ap">✓ Aprovar</button><button class="bt aj">✎ Pedir ajuste</button><button class="bt so">Só enviar comentário</button></div></div>`
       : `<div class="aviso-prod"><b>Em produção.</b> Este post entra no calendário com ${antecedencia} dias de antecedência, até ${Math.max(1, d - antecedencia)}/12, com a arte, o vídeo e a legenda prontos para aprovar.</div>`}
