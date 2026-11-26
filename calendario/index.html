@@ -196,13 +196,44 @@ h2 { font-weight: 500; font-size: clamp(26px, 4.6vw, 40px); line-height: 1.1; ma
 .fim h2 { margin: 12px auto; max-width: 20ch; }
 .fim a { display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 28px; margin-top: 16px; background: var(--tinta); color: #fff; text-decoration: none; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; }
 
+/* abas: uma coisa de cada vez */
+.abas { position: sticky; top: 58px; z-index: 9; background: rgba(247,243,236,.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--linha); }
+.abas .casca { display: flex; gap: 8px; padding-top: 10px; padding-bottom: 10px; }
+.abas button { flex: 1; max-width: 260px; height: 42px; border: 1px solid var(--tinta); background: none; font: 500 12.5px Jost, sans-serif; letter-spacing: .14em; text-transform: uppercase; cursor: pointer; color: var(--tinta); }
+.abas button.on { background: var(--tinta); color: #fff; }
+.abas button .q { display: inline-grid; place-items: center; min-width: 20px; height: 20px; border-radius: 10px; background: var(--espera); color: #fff; font-size: 11px; letter-spacing: 0; margin-left: 6px; padding: 0 5px; }
+body[data-aba="dezembro"] #ano, body[data-aba="ano"] #dezembro, body[data-aba="ano"] .fim { display: none; }
+section#ano, section#dezembro { padding-top: 34px; }
+/* ações direto no cartão da fila */
+.cartao { cursor: pointer; text-align: left; }
+.cartao .acoes-c { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 0 10px 10px; }
+.cartao .acoes-c button { height: 34px; border: 1px solid var(--linha); background: #fff; font: 600 11px Jost, sans-serif; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+.cartao .acoes-c .c-ap { background: var(--ok); border-color: var(--ok); color: #fff; }
+.cartao .acoes-c .c-aj { color: var(--ajuste); border-color: var(--ajuste); }
+.dica { margin-top: 10px; font-size: 13.5px; color: var(--cinza); }
+.dica b { color: var(--tinta); font-weight: 500; }
+
 @media (max-width: 860px) {
   .meses { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 92px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 2px 10px; }
   .mes { scroll-snap-align: start; height: 118px; }
   .estacoes { display: none; }
-  .detalhe { grid-template-columns: 1fr; }
-  .detalhe .foto { width: min(100%, 360px); justify-self: center; }
-  .detalhe .txt { padding: 18px; }
+  /* ano no celular: foto à esquerda, lista de meses à direita, detalhes embaixo */
+  .ano-grid { display: grid; grid-template-columns: minmax(0, 1fr) 128px; gap: 8px; margin-top: 16px; }
+  .ano-grid .detalhe-box, .ano-grid .detalhe { display: contents; }
+  .ano-grid .detalhe .foto { grid-column: 1; grid-row: 1; width: 100%; border-radius: 10px; overflow: hidden; }
+  .ano-grid .detalhe .foto span { left: 8px; right: 8px; bottom: 8px; white-space: normal; font-size: 9px; line-height: 1.35; }
+  .ano-grid .faixa-ano { grid-column: 2; grid-row: 1; contain: size; overflow-y: auto; margin: 0; scrollbar-width: none; }
+  .ano-grid .faixa-ano::-webkit-scrollbar { display: none; }
+  .ano-grid .meses { grid-auto-flow: row; grid-template-columns: 1fr; grid-auto-columns: auto; overflow: visible; padding: 0; gap: 5px; scroll-snap-type: none; }
+  .ano-grid .mes { height: 58px; padding: 6px 8px; border-radius: 8px; }
+  .ano-grid .mes b { font-size: 13px; } .ano-grid .mes small { font-size: 9.5px; }
+  .ano-grid .mes.on { transform: none; outline-offset: 0; }
+  .ano-grid .detalhe .txt { grid-column: 1 / -1; grid-row: 2; padding: 14px 2px 0; gap: 12px; }
+  .hero { padding: 26px 0 18px; }
+  .hero h1 { font-size: 32px; }
+  .hero .intro { font-size: 14px; }
+  .abas .casca { padding-left: 12px; padding-right: 12px; }
+  .abas button { font-size: 11px; letter-spacing: .08em; }
   .caixa { grid-template-columns: 1fr; }
   .modal { padding: 0; align-items: end; }
   .caixa { max-height: 94dvh; animation: sobeF .45s var(--fluido); }
@@ -219,25 +250,27 @@ h2 { font-weight: 500; font-size: clamp(26px, 4.6vw, 40px); line-height: 1.1; ma
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 </style>
 </head>
-<body>
+<body data-aba="dezembro">
 <header class="topo"><div class="casca"><img src="../midia/logo/0013_Logo-marca.webp" alt=""><b>Calendário</b><a href="../proposta/index.html">← Proposta</a></div></header>
 
 <section class="hero"><div class="casca">
   <div class="selo">Calendário de conteúdo</div>
   <h1>Tudo planejado. <em>Vocês aprovam.</em></h1>
-  <p class="intro">Em cima, o ano inteiro pelo calendário da moda: o que vai para o feed em cada mês. Embaixo, dezembro com os posts prontos para vocês aprovarem ou pedirem ajuste.</p>
-  <div class="atalhos"><a href="#dezembro">Aprovar dezembro ↓</a><a href="#ano">Ver o ano da moda</a></div>
+  <p class="intro">Dezembro já está montado: toque num post para ver a arte, o vídeo e a legenda, e aprove ou escreva o que quer mudar. Na outra aba, o ano inteiro pelo calendário da moda.</p>
 </div></section>
+<nav class="abas"><div class="casca"><button data-aba="dezembro" class="on">Aprovar dezembro<span class="q" id="q-espera"></span></button><button data-aba="ano">Ano da moda</button></div></nav>
 
 <section id="ano"><div class="casca">
   <div class="selo">Calendário da moda · 2027</div>
   <h2>O ano em duas estações.</h2>
   <p class="intro">O feed acompanha o que a confecção está vendendo: verão no começo e no fim do ano, inverno no meio. Toque num mês para ver as peças e as ideias de post.</p>
+  <div class="ano-grid">
   <div class="faixa-ano">
     <div class="estacoes"><div class="v">☀ Alto Verão 26/27</div><div class="i">❄ Outono/Inverno 2027</div><div class="v">☀ Primavera/Verão 27/28</div></div>
     <div class="meses"></div>
   </div>
   <div class="detalhe-box"></div>
+  </div>
 </div></section>
 
 <section id="dezembro"><div class="casca">
@@ -250,6 +283,7 @@ h2 { font-weight: 500; font-size: clamp(26px, 4.6vw, 40px); line-height: 1.1; ma
     <div class="placar"></div>
   </div>
   <div class="rot" style="margin-top:26px">Esperando a aprovação de vocês</div>
+  <p class="dica">Toque no post para ver tudo, ou use <b>Aprovar</b> e <b>Ajuste</b> direto no cartão. No ajuste, é só escrever o que precisa mudar.</p>
   <div class="fila"></div>
   <div class="rot" style="margin-top:26px">O mês inteiro</div>
   <div class="grade"></div>
@@ -260,7 +294,7 @@ h2 { font-weight: 500; font-size: clamp(26px, 4.6vw, 40px); line-height: 1.1; ma
 <section class="fim"><div class="casca">
   <div class="selo">Próximo passo</div>
   <h2>A primeira semana já está esperando vocês.</h2>
-  <a href="#dezembro">Aprovar a primeira semana →</a>
+  <a href="#dezembro" onclick="scrollTo({top:0,behavior:'smooth'});return false">Aprovar a primeira semana →</a>
 </div></section>
 
 <div class="toast" role="status"></div>
@@ -332,9 +366,11 @@ function placar() {
 function fila() {
   const dias = diasAtivos().filter((d) => pronto(d));
   $(".fila").innerHTML = dias.map((d) => { const p = D.posts[d], s = status(d);
-    return `<button class="cartao" data-d="${d}"><div class="th">${capa(p)}${icone(p)}<span class="st ${s}">${ROT[s]}</span></div>
-      <div class="info"><small>${dataLonga(d)} · ${TIPO[p.tipo]}</small><b>${esc(p.titulo)}</b></div></button>`; }).join("");
-  $(".fila").querySelectorAll("[data-d]").forEach((b) => (b.onclick = () => abrir(+b.dataset.d)));
+    return `<div class="cartao" data-d="${d}" role="button" tabindex="0"><div class="th">${capa(p)}${icone(p)}<span class="st ${s}">${ROT[s]}</span></div>
+      <div class="info"><small>${dataLonga(d)} · ${TIPO[p.tipo]}</small><b>${esc(p.titulo)}</b></div>
+      ${s === "espera" ? `<div class="acoes-c"><button class="c-ap" data-f="ap">✓ Aprovar</button><button class="c-aj" data-f="aj">✎ Ajuste</button></div>` : ""}</div>`; }).join("");
+  $(".fila").querySelectorAll("[data-d]").forEach((b) => (b.onclick = (e) => abrir(+b.dataset.d, e.target.closest("[data-f]")?.dataset.f)));
+  const q = dias.filter((d) => status(d) === "espera").length; $("#q-espera").textContent = q || ""; $("#q-espera").style.display = q ? "" : "none";
 }
 const SEM = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
 const dataLonga = (d) => `${SEM[new Date(D.ano, D.mes, d).getDay()].slice(0, 3)}, ${d}/12`;
@@ -356,7 +392,7 @@ function grade() {
 function tudo() { placar(); fila(); grade(); }
 
 /* ── modal do post ── */
-function abrir(d) {
+function abrir(d, foco) {
   const p = D.posts[d], s = status(d), ok = pronto(d) || estado[d]?.st;
   const midia = p.tipo === "reels"
     ? `<div class="mid reel"><div class="carr"><div class="slide"><video src="${p.video}" poster="${p.capa}" autoplay muted loop playsinline></video></div></div></div>`
@@ -414,11 +450,19 @@ function abrir(d) {
   m.querySelector(".ap").onclick = () => registrar("ap");
   m.querySelector(".aj").onclick = () => registrar("aj");
   m.querySelector(".so").onclick = () => registrar("so");
+  // atalho do cartão: "Ajuste" já abre com o cursor na caixa de texto; "Aprovar" leva ao botão
+  if (foco === "aj") setTimeout(() => { txt.scrollIntoView({ block: "center", behavior: "smooth" }); txt.focus(); txt.placeholder = "Escreva aqui o que precisa mudar neste post…"; }, 450);
+  if (foco === "ap") setTimeout(() => { const b = m.querySelector(".ap"); b.scrollIntoView({ block: "center", behavior: "smooth" }); if (!inp.value) inp.focus(); }, 450);
 }
 
 document.querySelectorAll("[data-a]").forEach((b) => (b.onclick = () => {
   antecedencia = +b.dataset.a; document.querySelectorAll("[data-a]").forEach((x) => x.classList.toggle("on", x === b)); tudo();
 }));
+document.querySelectorAll("[data-aba]").forEach((b) => (b.onclick = () => {
+  document.body.dataset.aba = b.dataset.aba; document.querySelectorAll("[data-aba]").forEach((x) => x.classList.toggle("on", x === b));
+  const alvo = $(".abas"); if (scrollY > alvo.offsetTop) scrollTo({ top: alvo.offsetTop - 58 });
+}));
+if (location.hash === "#ano") $('[data-aba="ano"]').click();
 $("[data-reset]").onclick = () => { estado = {}; salvar(); tudo(); toast("Demonstração reiniciada"); };
 tudo();
 })();
