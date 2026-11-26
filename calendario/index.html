@@ -125,6 +125,7 @@ h2 { font-weight: 500; font-size: clamp(26px, 4.6vw, 40px); line-height: 1.1; ma
 .arte { position: absolute; inset: 0; background: var(--img) center / cover; display: flex; flex-direction: column; justify-content: flex-end; padding: 9%; color: #fff; overflow: hidden; }
 .arte::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22,20,18,.05) 35%, rgba(22,20,18,.78)); }
 .arte > * { position: relative; }
+.arte.foto::before { display: none; }
 .arte .lg { position: absolute; top: 7%; left: 7%; width: 18%; max-width: 64px; height: auto; object-fit: contain; filter: drop-shadow(0 2px 6px #0006); }
 .dia .arte .lg { top: 24px; left: 7px; width: 22%; }
 .arte b { font-weight: 600; font-size: clamp(9px, 6.5cqw, 34px); line-height: 1.05; text-transform: uppercase; letter-spacing: .02em; }
@@ -307,15 +308,16 @@ const D = window.DEZ, CHAVE = "vg-cal-v1";
 let estado = {}, antecedencia = 15, nome = ""; // abre no pacote recomendado (Completo, 15 dias)
 try { estado = JSON.parse(localStorage.getItem(CHAVE)) || {}; nome = localStorage.getItem("vg-nome") || ""; } catch (e) {}
 const salvar = () => { try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (e) {} };
-// "hoje" da demonstração = 26/11/2026; com 7 dias prontos até 4/12, com 15 dias até 11/12
-const pronto = (d) => d <= (antecedencia === 7 ? 4 : 11);
+// demonstração: as 2 primeiras semanas (1–14/12) já estão prontas com o conteúdo real da Opção 1; com 7 dias, só a 1ª semana
+const pronto = (d) => d <= (antecedencia === 7 ? 7 : 14);
 // R$ 2.500 (7 dias) posta de segunda a sexta; R$ 3.000 (15 dias) posta todo dia, com fim de semana e Natal
 const ativo = (d) => D.posts[d] && (!D.posts[d].fds || antecedencia === 15);
 const diasAtivos = () => Object.keys(D.posts).map(Number).filter(ativo).sort((a, b) => a - b);
-const status = (d) => (estado[d]?.st) || (pronto(d) ? "espera" : d <= (antecedencia === 7 ? 11 : 18) ? "prod" : "plan");
+const status = (d) => (estado[d]?.st) || (pronto(d) ? "espera" : d <= (antecedencia === 7 ? 14 : 21) ? "prod" : "plan");
 const ROT = { espera: "Aguardando", ok: "Aprovado", ajuste: "Ajuste", prod: "Em produção", plan: "Planejado" };
 
 function arte(sl) {
+  if (sl.foto) return `<div class="arte foto" style="--img:url(${sl.foto})"></div>`;
   return `<div class="arte" style="--img:url(${sl.img})"><img class="lg" src="${LOGO}" alt=""><b>${esc(sl.t)}</b>${sl.s ? `<i>${esc(sl.s)}</i>` : ""}<span class="faixa"></span></div>`;
 }
 const capa = (p) => p.tipo === "reels" ? `<img src="${p.capa}" alt="">` : arte(p.slides[0]);
