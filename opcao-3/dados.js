@@ -223,12 +223,12 @@ window.PERFIL = {
     "../midia/p/m01-1.webp",
     "../midia/p/m01-2.webp"
    ],
-   "legenda": "Quatro estampas, uma tarde de verão ☀️ Arrasta para ver o painel completo.\n\n#verao2027 #brasSP #modapraia #modabrasileira #tecidos",
+   "legenda": "Quatro estampas, uma tarde de verão ☀️ Arrasta para ver o painel completo.\n\n#verao2027 #vanguardatextil #modapraia #estampariadigital #printdesign",
    "id": "o3-00",
    "fixado": true,
    "proporcao": "1080 / 1440",
-   "curtidas": 74,
-   "comentarios": 14,
+   "curtidas": 465,
+   "comentarios": 37,
    "data": "1 dia"
   },
   {
@@ -237,14 +237,30 @@ window.PERFIL = {
     "../midia/p/m10.mp4"
    ],
    "capa": "../midia/p/m10.webp",
-   "legenda": "Folhagem Azul, ref. 14054wB: da peça ao tecido 🌿\n\n#barrado #estampariadigital #estampaexclusiva #modapraia #modabrasileira",
+   "legenda": "Folhagem Azul, ref. 14054wB: da peça ao tecido 🌿\n\n#barrado #confeccao #estampas #estampariadigital #printdesign",
    "id": "o3-01",
    "fixado": true,
-   "curtidas": 450,
-   "comentarios": 6,
+   "curtidas": 440,
+   "comentarios": 17,
    "data": "2 dias",
-   "views": 9812,
-   "reposts": 9
+   "views": 2901,
+   "reposts": 19
+  },
+  {
+   "tipo": "carrossel",
+   "midias": [
+    "../midia/p/c-13998w_Cropped_v3-0.webp",
+    "../midia/p/c-13998w_Cropped_v3-1.webp",
+    "../midia/p/c-13998w_Cropped_v3-2.webp",
+    "../midia/p/c-13998w_Cropped_v3-3.webp",
+    "../midia/p/c-13998w_Cropped_v3-4.webp"
+   ],
+   "legenda": "Confete em 5 olhares: a ficha da peça, o lookbook, o espelho, o cabide e o presente 🎁 Arrasta 👉 Ref. 13998w\n\n#lookbook #modabrasileira #modapraia #confeccao #estampaexclusiva",
+   "id": "o3-02",
+   "proporcao": "1080 / 1350",
+   "curtidas": 277,
+   "comentarios": 8,
+   "data": "3 dias"
   },
   {
    "tipo": "reel",
@@ -252,13 +268,13 @@ window.PERFIL = {
     "../midia/p/s27-14225w.mp4"
    ],
    "capa": "../midia/p/s27-14225w.webp",
-   "legenda": "Na peça e na estampa: Hibisco. Ref. 14225w 💫 Manda pra quem tá montando a coleção.\n\n#modabrasileira #estampariadigital #estampaexclusiva #modapraia #brasSP",
-   "id": "o3-02",
-   "curtidas": 212,
-   "comentarios": 38,
-   "data": "3 dias",
-   "views": 15433,
-   "reposts": 20
+   "legenda": "Na peça e na estampa: Hibisco. Ref. 14225w 💫 Manda pra quem tá montando a coleção.\n\n#estampaexclusiva #vanguardatextil #confeccao #estampas #modapraia",
+   "id": "o3-03",
+   "curtidas": 108,
+   "comentarios": 10,
+   "data": "4 dias",
+   "views": 5423,
+   "reposts": 6
   },
   {
    "tipo": "carrossel",
@@ -267,12 +283,12 @@ window.PERFIL = {
     "../midia/p/s29-14064wB-1.webp",
     "../midia/p/s29-14064wB-2.webp"
    ],
-   "legenda": "Cartela de cores da estampa Palmeiras Pop 🎨 As cores que você vê aqui são as que saem no tecido. Ref. 14064wB\n\n#cartela #brasSP #modabrasileira #estampaexclusiva #modapraia",
-   "id": "o3-03",
+   "legenda": "Cartela de cores da estampa Palmeiras Pop 🎨 As cores que você vê aqui são as que saem no tecido. Ref. 14064wB\n\n#cartela #estampas #vanguardatextil #modabrasileira #tecidos",
+   "id": "o3-04",
    "proporcao": "1080 / 1350",
-   "curtidas": 149,
-   "comentarios": 6,
-   "data": "4 dias"
+   "curtidas": 440,
+   "comentarios": 5,
+   "data": "5 dias"
   },
   {
    "tipo": "reel",
@@ -280,13 +296,13 @@ window.PERFIL = {
     "../midia/p/s26-13998w_Cropped_v3.mp4"
    ],
    "capa": "../midia/p/s26-13998w_Cropped_v3.webp",
-   "legenda": "Da peça ao detalhe: estampa Confete 🌿 Ref. 13998w. Qual peça você faria com ela?\n\n#modapraia #estampariadigital #estampaexclusiva #brasSP #printdesign",
-   "id": "o3-04",
-   "curtidas": 465,
-   "comentarios": 37,
-   "data": "5 dias",
-   "views": 8012,
-   "reposts": 6
+   "legenda": "Da peça ao detalhe: estampa Confete 🌿 Ref. 13998w. Qual peça você faria com ela?\n\n#confeccao #estampariadigital #modapraia #printdesign #estampaexclusiva",
+   "id": "o3-05",
+   "curtidas": 228,
+   "comentarios": 32,
+   "data": "6 dias",
+   "views": 8031,
+   "reposts": 10
   },
   {
    "tipo": "reel",
@@ -294,13 +310,13 @@ window.PERFIL = {
     "../midia/p/s25-14226w.mp4"
    ],
    "capa": "../midia/p/s25-14226w.webp",
-   "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Noite Tropical (ref. 14226w) do jeito que você imaginou.\n\n#antesedepois #estampariadigital #vanguardatextil #tecidos #estampaexclusiva",
-   "id": "o3-05",
-   "curtidas": 191,
-   "comentarios": 34,
-   "data": "6 dias",
-   "views": 8060,
-   "reposts": 2
+   "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Noite Tropical (ref. 14226w) do jeito que você imaginou.\n\n#antesedepois #tecidos #confeccao #modabrasileira #estampariadigital",
+   "id": "o3-06",
+   "curtidas": 317,
+   "comentarios": 32,
+   "data": "1 semana",
+   "views": 11270,
+   "reposts": 6
   },
   {
    "tipo": "carrossel",
@@ -309,11 +325,11 @@ window.PERFIL = {
     "../midia/p/s28-14202w_biquini_v10-1.webp",
     "../midia/p/s28-14202w_biquini_v10-2.webp"
    ],
-   "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Onda Rubi de pertinho 👉 Ref. 14202w\n\n#brasSP #estampariadigital #vanguardatextil #estampas #printdesign",
-   "id": "o3-06",
+   "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Onda Rubi de pertinho 👉 Ref. 14202w\n\n#estampariadigital #brasSP #estampaexclusiva #tecidos #confeccao",
+   "id": "o3-07",
    "proporcao": "1080 / 1350",
    "curtidas": 404,
-   "comentarios": 9,
+   "comentarios": 40,
    "data": "1 semana"
   },
   {
@@ -322,13 +338,13 @@ window.PERFIL = {
     "../midia/p/s27-13974wB.mp4"
    ],
    "capa": "../midia/p/s27-13974wB.webp",
-   "legenda": "Na peça e na estampa: Rosa Antiga. Ref. 13974wB 💫 Manda pra quem tá montando a coleção.\n\n#estampariadigital #estampas #estampaexclusiva #printdesign #vanguardatextil",
-   "id": "o3-07",
-   "curtidas": 346,
-   "comentarios": 21,
+   "legenda": "Na peça e na estampa: Rosa Antiga. Ref. 13974wB 💫 Manda pra quem tá montando a coleção.\n\n#brasSP #confeccao #printdesign #tecidos #estampariadigital",
+   "id": "o3-08",
+   "curtidas": 95,
+   "comentarios": 10,
    "data": "1 semana",
-   "views": 10471,
-   "reposts": 3
+   "views": 4788,
+   "reposts": 15
   },
   {
    "tipo": "carrossel",
@@ -337,12 +353,12 @@ window.PERFIL = {
     "../midia/p/s29-MKIT5189BA_20cm-1.webp",
     "../midia/p/s29-MKIT5189BA_20cm-2.webp"
    ],
-   "legenda": "Cartela de cores da estampa Palmeira Marinho 🎨 As cores que você vê aqui são as que saem no tecido. Ref. MKIT5189BA\n\n#cartela #confeccao #estampariadigital #modapraia #printdesign",
-   "id": "o3-08",
+   "legenda": "Cartela de cores da estampa Palmeira Marinho 🎨 As cores que você vê aqui são as que saem no tecido. Ref. MKIT5189BA\n\n#cartela #tecidos #estampas #modabrasileira #printdesign",
+   "id": "o3-09",
    "proporcao": "1080 / 1350",
-   "curtidas": 228,
-   "comentarios": 32,
-   "data": "1 semana"
+   "curtidas": 429,
+   "comentarios": 27,
+   "data": "2 semanas"
   },
   {
    "tipo": "reel",
@@ -350,13 +366,13 @@ window.PERFIL = {
     "../midia/p/s26-14054wB.mp4"
    ],
    "capa": "../midia/p/s26-14054wB.webp",
-   "legenda": "Da peça ao detalhe: estampa Folhagem Azul 🌿 Ref. 14054wB. Qual peça você faria com ela?\n\n#confeccao #modabrasileira #tecidos #estampaexclusiva #estampas",
-   "id": "o3-09",
-   "curtidas": 192,
-   "comentarios": 15,
+   "legenda": "Da peça ao detalhe: estampa Folhagem Azul 🌿 Ref. 14054wB. Qual peça você faria com ela?\n\n#confeccao #estampas #modabrasileira #estampaexclusiva #vanguardatextil",
+   "id": "o3-10",
+   "curtidas": 111,
+   "comentarios": 7,
    "data": "2 semanas",
-   "views": 15197,
-   "reposts": 15
+   "views": 10596,
+   "reposts": 7
   },
   {
    "tipo": "reel",
@@ -364,13 +380,13 @@ window.PERFIL = {
     "../midia/p/s25-14213w.mp4"
    ],
    "capa": "../midia/p/s25-14213w.webp",
-   "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Pavão (ref. 14213w) do jeito que você imaginou.\n\n#antesedepois #estampaexclusiva #modapraia #estampas #vanguardatextil",
-   "id": "o3-10",
-   "curtidas": 392,
-   "comentarios": 30,
+   "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Pavão (ref. 14213w) do jeito que você imaginou.\n\n#antesedepois #brasSP #vanguardatextil #estampaexclusiva #printdesign",
+   "id": "o3-11",
+   "curtidas": 390,
+   "comentarios": 14,
    "data": "2 semanas",
-   "views": 8926,
-   "reposts": 20
+   "views": 6667,
+   "reposts": 18
   },
   {
    "tipo": "carrossel",
@@ -379,12 +395,12 @@ window.PERFIL = {
     "../midia/p/s28-14051wB-1.webp",
     "../midia/p/s28-14051wB-2.webp"
    ],
-   "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Jardim Noturno de pertinho 👉 Ref. 14051wB\n\n#brasSP #confeccao #printdesign #tecidos #estampariadigital",
-   "id": "o3-11",
+   "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Jardim Noturno de pertinho 👉 Ref. 14051wB\n\n#modapraia #vanguardatextil #modabrasileira #confeccao #tecidos",
+   "id": "o3-12",
    "proporcao": "1080 / 1350",
-   "curtidas": 95,
-   "comentarios": 10,
-   "data": "2 semanas"
+   "curtidas": 122,
+   "comentarios": 34,
+   "data": "3 semanas"
   },
   {
    "tipo": "reel",
@@ -392,13 +408,13 @@ window.PERFIL = {
     "../midia/p/s27-14226w.mp4"
    ],
    "capa": "../midia/p/s27-14226w.webp",
-   "legenda": "Na peça e na estampa: Noite Tropical. Ref. 14226w 💫 Manda pra quem tá montando a coleção.\n\n#estampas #brasSP #tecidos #estampaexclusiva #confeccao",
-   "id": "o3-12",
-   "curtidas": 132,
-   "comentarios": 21,
+   "legenda": "Na peça e na estampa: Noite Tropical. Ref. 14226w 💫 Manda pra quem tá montando a coleção.\n\n#estampaexclusiva #brasSP #printdesign #modabrasileira #tecidos",
+   "id": "o3-13",
+   "curtidas": 225,
+   "comentarios": 23,
    "data": "3 semanas",
-   "views": 10544,
-   "reposts": 18
+   "views": 11591,
+   "reposts": 9
   },
   {
    "tipo": "carrossel",
@@ -407,12 +423,12 @@ window.PERFIL = {
     "../midia/p/s29-13578w_v8-1.webp",
     "../midia/p/s29-13578w_v8-2.webp"
    ],
-   "legenda": "Cartela de cores da estampa Aquarela 🎨 As cores que você vê aqui são as que saem no tecido. Ref. 13578w\n\n#cartela #brasSP #confeccao #estampas #modapraia",
-   "id": "o3-13",
+   "legenda": "Cartela de cores da estampa Aquarela 🎨 As cores que você vê aqui são as que saem no tecido. Ref. 13578w\n\n#cartela #vanguardatextil #modabrasileira #printdesign #confeccao",
+   "id": "o3-14",
    "proporcao": "1080 / 1350",
-   "curtidas": 107,
-   "comentarios": 9,
-   "data": "3 semanas"
+   "curtidas": 478,
+   "comentarios": 31,
+   "data": "4 semanas"
   },
   {
    "tipo": "reel",
@@ -420,13 +436,13 @@ window.PERFIL = {
     "../midia/p/s26-14064wB.mp4"
    ],
    "capa": "../midia/p/s26-14064wB.webp",
-   "legenda": "Da peça ao detalhe: estampa Palmeiras Pop 🌿 Ref. 14064wB. Qual peça você faria com ela?\n\n#estampariadigital #modapraia #estampas #tecidos #vanguardatextil",
-   "id": "o3-14",
-   "curtidas": 326,
-   "comentarios": 38,
-   "data": "4 semanas",
-   "views": 2742,
-   "reposts": 2
+   "legenda": "Da peça ao detalhe: estampa Palmeiras Pop 🌿 Ref. 14064wB. Qual peça você faria com ela?\n\n#vanguardatextil #brasSP #estampas #estampaexclusiva #confeccao",
+   "id": "o3-15",
+   "curtidas": 317,
+   "comentarios": 27,
+   "data": "1 mês",
+   "views": 3439,
+   "reposts": 9
   },
   {
    "tipo": "reel",
@@ -434,13 +450,13 @@ window.PERFIL = {
     "../midia/p/s25-MKIT5275_v2.mp4"
    ],
    "capa": "../midia/p/s25-MKIT5275_v2.webp",
-   "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Flor Sálvia (ref. MKIT5275) do jeito que você imaginou.\n\n#antesedepois #estampas #modabrasileira #modapraia #vanguardatextil",
-   "id": "o3-15",
-   "curtidas": 403,
-   "comentarios": 33,
+   "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Flor Sálvia (ref. MKIT5275) do jeito que você imaginou.\n\n#antesedepois #estampaexclusiva #brasSP #vanguardatextil #modabrasileira",
+   "id": "o3-16",
+   "curtidas": 200,
+   "comentarios": 15,
    "data": "1 mês",
-   "views": 4510,
-   "reposts": 17
+   "views": 12686,
+   "reposts": 6
   }
  ]
 };
