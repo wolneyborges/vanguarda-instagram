@@ -270,14 +270,6 @@ function abrirReels(i = 0) {
   requestAnimationFrame(() => (rolo.scrollTop = itens[i]?.offsetTop || 0));
 }
 
-/* ---------- montar ---------- */
-document.title = `${P.nome} (@${P.usuario})`;
-tel.appendChild(perfil());
-const base = el(`<nav class="base"><button>${ic("casa", 26)}</button><button>${ic("busca", 26)}</button>
-  <button data-r>${ic("reels", 26)}</button><button>${ic("enviar", 26)}</button><span class="mini"><img src="${P.avatar}" alt=""></span></nav>`);
-$("[data-r]", base).onclick = () => reels.length && abrirReels(0);
-tel.appendChild(base);
-
 /* cortina: a tela abre coberta pelas faixas (como a capa terminou) e elas saem revelando o perfil */
 (function cortina() {
   const c = document.createElement("div");
@@ -295,8 +287,17 @@ tel.appendChild(base);
   document.body.appendChild(c);
   // espera as estampas (no máx. 1,2 s), segura um instante e abre
   Promise.race([Promise.all(imgs), new Promise((ok) => setTimeout(ok, 1200))]).then(() => {
-    setTimeout(() => c.classList.add("saindo"), 250);
-    setTimeout(() => c.remove(), 250 + 750 + 450 + 100);
+    setTimeout(() => c.classList.add("saindo"), 120);
+    setTimeout(() => c.remove(), 120 + 750 + 450 + 100);
   });
 })();
+
+/* ---------- montar ---------- */
+document.title = `${P.nome} (@${P.usuario})`;
+tel.appendChild(perfil());
+const base = el(`<nav class="base"><button>${ic("casa", 26)}</button><button>${ic("busca", 26)}</button>
+  <button data-r>${ic("reels", 26)}</button><button>${ic("enviar", 26)}</button><span class="mini"><img src="${P.avatar}" alt=""></span></nav>`);
+$("[data-r]", base).onclick = () => reels.length && abrirReels(0);
+tel.appendChild(base);
+
 })();
