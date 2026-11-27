@@ -104,11 +104,89 @@ window.DEZ = {
   },
 };
 
-/* Dias 1–14: conteúdo REAL da Opção 1 (gerado de site/opcao-1/dados.js). */
+/* Dias 1–14: as 14 primeiras peças do perfil único (motion/calendario_dez.py). */
 Object.assign(window.DEZ.posts, {
  "1": {
+  "titulo": "Histórias de Cor",
+  "legenda": "Histórias de Cor: 9 estampas em 3 paletas. Qual é a sua? 💙🧡💗\n\n#paletadecores #modapraia #modabrasileira #estampaexclusiva #estampariadigital",
+  "tipo": "reels",
+  "video": "../midia/p/m24.mp4",
+  "capa": "../midia/p/m24.webp"
+ },
+ "2": {
+  "titulo": "Verão na pele",
+  "legenda": "Verão na pele: a estampa Onda Rubi em 5 looks de praia 🌊\n\n#modapraia #modabrasileira #confeccao #brasSP #estampariadigital",
+  "tipo": "reels",
+  "video": "../midia/p/m06.mp4",
+  "capa": "../midia/p/m06.webp"
+ },
+ "3": {
+  "titulo": "Acabou de ganhar cor",
+  "legenda": "Acabou de ganhar cor 🎨 Sua estampa, direto no tecido.\n\n#bastidores #printdesign #estampariadigital #brasSP #modapraia",
+  "tipo": "reels",
+  "video": "../midia/p/m21.mp4",
+  "capa": "../midia/p/m21.webp"
+ },
+ "4": {
+  "titulo": "Folhagem Azul",
+  "legenda": "Folhagem Azul, ref. 14054wB: da peça ao tecido 🌿\n\n#barrado #confeccao #vanguardatextil #modapraia #estampas",
+  "tipo": "reels",
+  "video": "../midia/p/m10.mp4",
+  "capa": "../midia/p/m10.webp"
+ },
+ "5": {
+  "titulo": "Ornamento Azul",
+  "legenda": "Ornamento Azul, ref. 14212w. Elegante do tecido ao detalhe 💎\n\n#azul #estampaexclusiva #estampas #estampariadigital #tecidos",
+  "fds": true,
+  "tipo": "carrossel",
+  "slides": [
+   {
+    "foto": "../midia/p/m05-0.webp"
+   },
+   {
+    "foto": "../midia/p/m05-1.webp"
+   },
+   {
+    "foto": "../midia/p/m05-2.webp"
+   },
+   {
+    "foto": "../midia/p/m05-3.webp"
+   }
+  ]
+ },
+ "6": {
+  "titulo": "Quatro estampas",
+  "legenda": "Quatro estampas, uma tarde de verão ☀️ Arrasta para ver o painel completo.\n\n#verao2027 #estampaexclusiva #estampariadigital #estampas #tecidos",
+  "fds": true,
+  "tipo": "carrossel",
+  "slides": [
+   {
+    "foto": "../midia/p/m01-0.webp"
+   },
+   {
+    "foto": "../midia/p/m01-1.webp"
+   },
+   {
+    "foto": "../midia/p/m01-2.webp"
+   }
+  ]
+ },
+ "7": {
+  "titulo": "Borboleta Azul",
+  "legenda": "Borboleta Azul: o barrado que desce até a barra 🦋 Ref. 14045wB\n\n#barrado #estampaexclusiva #vanguardatextil #estampas #confeccao",
+  "tipo": "carrossel",
+  "slides": [
+   {
+    "foto": "../midia/p/m02-0.webp"
+   },
+   {
+    "foto": "../midia/p/m02-1.webp"
+   }
+  ]
+ },
+ "8": {
   "titulo": "Lookbook: Jardim Pink",
-  "legenda": "Jardim Pink em 5 olhares: a ficha da peça, o lookbook, o espelho, o cabide e o presente 🎁 Arrasta 👉 Ref. 14212w\n\n#lookbook #estampariadigital #printdesign #brasSP #modapraia",
+  "legenda": "Jardim Pink em 5 olhares: a ficha da peça, o lookbook, o espelho, o cabide e o presente 🎁 Arrasta 👉 Ref. 14212w\n\n#lookbook #confeccao #brasSP #estampariadigital #estampas",
   "tipo": "carrossel",
   "slides": [
    {
@@ -128,150 +206,63 @@ Object.assign(window.DEZ.posts, {
    }
   ]
  },
- "2": {
-  "titulo": "Lookbook: Folhagem Azul",
-  "legenda": "Folhagem Azul em 5 olhares: a ficha da peça, o lookbook, o espelho, o cabide e o presente 🎁 Arrasta 👉 Ref. 14054wB\n\n#lookbook #modapraia #confeccao #vanguardatextil #brasSP",
-  "tipo": "carrossel",
-  "slides": [
-   {
-    "foto": "../midia/p/c-14054wB-0.webp"
-   },
-   {
-    "foto": "../midia/p/c-14054wB-1.webp"
-   },
-   {
-    "foto": "../midia/p/c-14054wB-2.webp"
-   },
-   {
-    "foto": "../midia/p/c-14054wB-3.webp"
-   },
-   {
-    "foto": "../midia/p/c-14054wB-4.webp"
-   }
-  ]
- },
- "3": {
-  "titulo": "Cartela de cores: Jardim Noturno",
-  "legenda": "Cartela de cores da estampa Jardim Noturno 🎨 As cores que você vê aqui são as que saem no tecido. Ref. 14051wB\n\n#cartela #estampas #modapraia #estampaexclusiva #vanguardatextil",
-  "tipo": "carrossel",
-  "slides": [
-   {
-    "foto": "../midia/p/s29-14051wB-0.webp"
-   },
-   {
-    "foto": "../midia/p/s29-14051wB-1.webp"
-   },
-   {
-    "foto": "../midia/p/s29-14051wB-2.webp"
-   }
-  ]
- },
- "4": {
-  "titulo": "Arte e tecido: Pôr do Sol",
-  "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Pôr do Sol (ref. 13964wB) do jeito que você imaginou.\n\n#antesedepois #brasSP #estampariadigital #confeccao #vanguardatextil",
-  "tipo": "reels",
-  "video": "../midia/p/s25-13964wB.mp4",
-  "capa": "../midia/p/s25-13964wB.webp"
- },
- "5": {
-  "titulo": "Da peça ao detalhe: Noite Tropical",
-  "legenda": "Da peça ao detalhe: estampa Noite Tropical 🌿 Ref. 14226w. Qual peça você faria com ela?\n\n#estampas #confeccao #vanguardatextil #modabrasileira #estampariadigital",
-  "fds": true,
-  "tipo": "reels",
-  "video": "../midia/p/s26-14226w.mp4",
-  "capa": "../midia/p/s26-14226w.webp"
- },
- "6": {
-  "titulo": "Pôr do Sol que vira vestido",
-  "legenda": "Pôr do sol que vira vestido 🌅 Ref. 13964wB\n\n#barrado #vanguardatextil #estampaexclusiva #brasSP #tecidos",
-  "fds": true,
-  "tipo": "carrossel",
-  "slides": [
-   {
-    "foto": "../midia/p/m04-0.webp"
-   },
-   {
-    "foto": "../midia/p/m04-1.webp"
-   }
-  ]
- },
- "7": {
-  "titulo": "Peça e estampa: Pavão",
-  "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Pavão de pertinho 👉 Ref. 14213w\n\n#vanguardatextil #printdesign #confeccao #brasSP #estampariadigital",
-  "tipo": "carrossel",
-  "slides": [
-   {
-    "foto": "../midia/p/s28-14213w-0.webp"
-   },
-   {
-    "foto": "../midia/p/s28-14213w-1.webp"
-   },
-   {
-    "foto": "../midia/p/s28-14213w-2.webp"
-   }
-  ]
- },
- "8": {
-  "titulo": "Arte e tecido: Lírio Azul",
-  "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Lírio Azul (ref. MKIT5266) do jeito que você imaginou.\n\n#antesedepois #printdesign #vanguardatextil #modabrasileira #estampariadigital",
-  "tipo": "reels",
-  "video": "../midia/p/s25-MKIT5266_v13.mp4",
-  "capa": "../midia/p/s25-MKIT5266_v13.webp"
- },
  "9": {
-  "titulo": "Da peça ao detalhe: Rosa Antiga",
-  "legenda": "Da peça ao detalhe: estampa Rosa Antiga 🌿 Ref. 13974wB. Qual peça você faria com ela?\n\n#modabrasileira #printdesign #estampariadigital #estampas #tecidos",
-  "tipo": "reels",
-  "video": "../midia/p/s26-13974wB.mp4",
-  "capa": "../midia/p/s26-13974wB.webp"
+  "titulo": "Lookbook: Confete",
+  "legenda": "Confete em 5 olhares: a ficha da peça, o lookbook, o espelho, o cabide e o presente 🎁 Arrasta 👉 Ref. 13998w\n\n#lookbook #confeccao #vanguardatextil #printdesign #estampariadigital",
+  "tipo": "carrossel",
+  "slides": [
+   {
+    "foto": "../midia/p/c-13998w_Cropped_v3-0.webp"
+   },
+   {
+    "foto": "../midia/p/c-13998w_Cropped_v3-1.webp"
+   },
+   {
+    "foto": "../midia/p/c-13998w_Cropped_v3-2.webp"
+   },
+   {
+    "foto": "../midia/p/c-13998w_Cropped_v3-3.webp"
+   },
+   {
+    "foto": "../midia/p/c-13998w_Cropped_v3-4.webp"
+   }
+  ]
  },
  "10": {
-  "titulo": "Painel de inspiração",
-  "legenda": "Painel de inspiração: Aquarela azul, ref. 13578w 💙\n\n#moodboard #confeccao #printdesign #vanguardatextil #tecidos",
-  "tipo": "post",
-  "slides": [
-   {
-    "foto": "../midia/p/m03-0.webp"
-   }
-  ]
+  "titulo": "Arte e tecido: Aquarela",
+  "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Aquarela (ref. 13578w) do jeito que você imaginou.\n\n#antesedepois #confeccao #estampaexclusiva #vanguardatextil #modabrasileira",
+  "tipo": "reels",
+  "video": "../midia/p/s25-13578w_v8.mp4",
+  "capa": "../midia/p/s25-13578w_v8.webp"
  },
  "11": {
-  "titulo": "Na peça e na estampa: Aquarela",
-  "legenda": "Na peça e na estampa: Aquarela. Ref. 13578w 💫 Manda pra quem tá montando a coleção.\n\n#vanguardatextil #estampaexclusiva #tecidos #estampariadigital #brasSP",
+  "titulo": "Arte e tecido: Rosa Antiga",
+  "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Rosa Antiga (ref. 13974wB) do jeito que você imaginou.\n\n#antesedepois #estampaexclusiva #estampariadigital #confeccao #estampas",
   "tipo": "reels",
-  "video": "../midia/p/s27-13578w_v8.mp4",
-  "capa": "../midia/p/s27-13578w_v8.webp"
+  "video": "../midia/p/s25-13974wB.mp4",
+  "capa": "../midia/p/s25-13974wB.webp"
  },
  "12": {
-  "titulo": "Peça e estampa: Borboleta Azul",
-  "legenda": "A peça, a estampa e o tecido. Arrasta para ver a Borboleta Azul de pertinho 👉 Ref. 14045wB\n\n#confeccao #estampas #modabrasileira #estampariadigital #tecidos",
+  "titulo": "Arte e tecido: Confete",
+  "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Confete (ref. 13998w) do jeito que você imaginou.\n\n#antesedepois #modabrasileira #printdesign #estampariadigital #estampas",
   "fds": true,
-  "tipo": "carrossel",
-  "slides": [
-   {
-    "foto": "../midia/p/s28-14045wB-0.webp"
-   },
-   {
-    "foto": "../midia/p/s28-14045wB-1.webp"
-   },
-   {
-    "foto": "../midia/p/s28-14045wB-2.webp"
-   }
-  ]
+  "tipo": "reels",
+  "video": "../midia/p/s25-13998w_Cropped_v3.mp4",
+  "capa": "../midia/p/s25-13998w_Cropped_v3.webp"
  },
  "13": {
-  "titulo": "Arte e tecido: Porcelana",
-  "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Porcelana (ref. 14212w) do jeito que você imaginou.\n\n#antesedepois #confeccao #brasSP #estampariadigital #estampas",
+  "titulo": "Arte e tecido: Palmeiras Pop",
+  "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Palmeiras Pop (ref. 14064wB) do jeito que você imaginou.\n\n#antesedepois #printdesign #vanguardatextil #modabrasileira #estampariadigital",
   "fds": true,
   "tipo": "reels",
-  "video": "../midia/p/s25-14212w_v5.mp4",
-  "capa": "../midia/p/s25-14212w_v5.webp"
+  "video": "../midia/p/s25-14064wB.mp4",
+  "capa": "../midia/p/s25-14064wB.webp"
  },
  "14": {
-  "titulo": "Da peça ao detalhe: Hibisco",
-  "legenda": "Da peça ao detalhe: estampa Hibisco 🌿 Ref. 14225w. Qual peça você faria com ela?\n\n#modabrasileira #estampaexclusiva #vanguardatextil #estampariadigital #confeccao",
+  "titulo": "Arte e tecido: Jardim Pink",
+  "legenda": "Primeiro é arte. Depois é tecido. ✨ A estampa Jardim Pink (ref. 14212w) do jeito que você imaginou.\n\n#antesedepois #vanguardatextil #printdesign #confeccao #brasSP",
   "tipo": "reels",
-  "video": "../midia/p/s26-14225w.mp4",
-  "capa": "../midia/p/s26-14225w.webp"
+  "video": "../midia/p/s25-14212w.mp4",
+  "capa": "../midia/p/s25-14212w.webp"
  }
 });
