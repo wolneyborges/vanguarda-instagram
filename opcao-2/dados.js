@@ -1,15 +1,14 @@
-/* Opção 2 — gerado por motion/perfis.py (identidade dos destaques: Ateliê). WhatsApp pendente. */
+/* Opção 2 — gerado por motion/perfis.py (identidade dos destaques: Ateliê). Sem WhatsApp (decisão do dono). */
 window.PERFIL = {
  "usuario": "vanguardatextil",
  "nome": "Tecidos, Malhas & Estamparia Digital.",
  "verificado": false,
  "avatar": "../midia/avatar.webp",
- "bio": "🎨 Sua arte, impressa no tecido certo\n🧵 Bases para moda, praia e fitness\n⏱️ Prova antes da produção\n📍 Brás · São Paulo\n💬 Orçamento no WhatsApp ⬇️",
+ "bio": "🎨 Sua arte, impressa no tecido certo\n🧵 Bases para moda, praia e fitness\n⏱️ Prova antes da produção\n📍 Brás · São Paulo\n💬 Orçamento pelo direct",
  "link": {
-  "texto": "wa.me/vanguarda",
-  "url": "https://wa.me/"
+  "texto": "Rua Major Marcelino, 52 · Brás",
+  "url": "https://maps.google.com/?q=Rua+Major+Marcelino,+52,+Brás,+São+Paulo"
  },
- "whatsapp": "",
  "numeros": {
   "seguidores": 1310,
   "seguindo": 186
@@ -24,9 +23,9 @@ window.PERFIL = {
      "bg": "linear-gradient(160deg,#1d1a17,#3a332c)",
      "quando": "1 sem",
      "cta": {
-      "texto": "Chamar no WhatsApp",
-      "url": "https://wa.me/",
-      "icone": "zap"
+      "texto": "Mandar mensagem",
+      "url": "https://ig.me/m/vanguardatextil",
+      "icone": "link"
      }
     }
    ]
@@ -36,33 +35,27 @@ window.PERFIL = {
    "capa": "../midia/destaques/op2/bases.webp",
    "stories": [
     {
-     "ph": "Fluit\nliso e estampado",
-     "bg": "linear-gradient(160deg,#1d1a17,#3a332c)",
+     "src": "../midia/p/base-fluit.webp",
      "quando": "1 sem"
     },
     {
-     "ph": "Suplex\nPower e estampado",
-     "bg": "linear-gradient(160deg,#1d1a17,#3a332c)",
+     "src": "../midia/p/base-suplex.webp",
      "quando": "1 sem"
     },
     {
-     "ph": "Linho estampado",
-     "bg": "linear-gradient(160deg,#1d1a17,#3a332c)",
+     "src": "../midia/p/base-linho.webp",
      "quando": "1 sem"
     },
     {
-     "ph": "Ponto Roma Combate",
-     "bg": "linear-gradient(160deg,#1d1a17,#3a332c)",
+     "src": "../midia/p/base-ponto-roma.webp",
      "quando": "1 sem"
     },
     {
-     "ph": "Crepe GGT estampado",
-     "bg": "linear-gradient(160deg,#1d1a17,#3a332c)",
+     "src": "../midia/p/base-crepe-ggt.webp",
      "quando": "1 sem"
     },
     {
-     "ph": "Tule estampado",
-     "bg": "linear-gradient(160deg,#1d1a17,#3a332c)",
+     "src": "../midia/p/base-tule.webp",
      "quando": "1 sem"
     }
    ]
@@ -138,8 +131,11 @@ window.PERFIL = {
    "capa": "../midia/destaques/op2/animal.webp",
    "stories": [
     {
-     "ph": "Animal print\nem breve",
-     "bg": "linear-gradient(160deg,#1d1a17,#3a332c)",
+     "src": "../midia/p/st-animal-2.webp",
+     "quando": "3 d"
+    },
+    {
+     "src": "../midia/p/st-animal-3.webp",
      "quando": "3 d"
     }
    ]
@@ -181,8 +177,23 @@ window.PERFIL = {
    "capa": "../midia/destaques/op2/clientes.webp",
    "stories": [
     {
-     "ph": "Peças dos nossos clientes\nem breve",
-     "bg": "linear-gradient(160deg,#1d1a17,#3a332c)",
+     "src": "../midia/p/st-cliente-1.webp",
+     "quando": "2 sem"
+    },
+    {
+     "src": "../midia/p/st-cliente-2.webp",
+     "quando": "2 sem"
+    },
+    {
+     "src": "../midia/p/st-cliente-3.webp",
+     "quando": "2 sem"
+    },
+    {
+     "src": "../midia/p/st-cliente-5.webp",
+     "quando": "2 sem"
+    },
+    {
+     "src": "../midia/p/st-cliente-6.webp",
      "quando": "2 sem"
     }
    ]
